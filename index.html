@@ -16,7 +16,7 @@ main{min-height:70vh}.page{display:none;max-width:1180px;margin:auto;padding:65p
 .hero{min-height:620px;display:grid;grid-template-columns:1fr 1.2fr;gap:35px;align-items:center}.hero h1{font:clamp(3rem,7vw,5.7rem)/.95 Georgia,serif;margin:12px 0}.eyebrow{color:var(--accent);font-weight:bold;letter-spacing:2px;text-transform:uppercase}.lead{font-size:1.15rem;color:var(--muted);max-width:560px}
 .cta{display:inline-block;margin-top:18px;padding:13px 22px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:bold}
 .visual{border-radius:28px;overflow:hidden;min-height:480px;background:#d9d2c5;display:flex;align-items:end;justify-content:center;position:relative}
-.visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.visual .caption{position:relative;margin:18px;background:rgba(255,253,249,.9);padding:10px 14px;border-radius:10px;font-weight:bold}
+.visual img,.visual video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.visual .caption{position:relative;margin:18px;background:rgba(255,253,249,.9);padding:10px 14px;border-radius:10px;font-weight:bold;z-index:1}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.cards4{grid-template-columns:repeat(4,1fr)}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 25px rgba(50,45,35,.04)}.card h3{font-family:Georgia,serif;font-size:1.45rem;margin-top:0}
 .section-title{font:clamp(2.3rem,5vw,4rem) Georgia,serif;margin:0 0 12px}.sub{color:var(--muted);max-width:720px;margin-bottom:35px}
@@ -58,7 +58,7 @@ footer{background:#303330;color:#eee;padding:38px 22px}.foot{max-width:1180px;ma
 <section id="inicio" class="page active">
 <div class="hero">
 <div><div class="eyebrow">Educação, esporte e futuro</div><h1>Um lugar para crescer.</h1><p class="lead">O Lar André Luiz acolhe crianças e adolescentes no contraturno escolar, oferecendo atividades que estimulam convivência, criatividade, autonomia e novas possibilidades.</p><a class="cta" href="#atividades" onclick="showPage('atividades')">Conheça nossas atividades</a></div>
-<div class="visual"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1000&q=80" alt="Crianças jogando futebol"><div class="caption">Esporte, amizade e movimento</div></div>
+<div class="visual"><video autoplay muted loop playsinline preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video><div class="caption">Esporte, amizade e movimento</div></div>
 </div>
 <h2 class="section-title">Um contraturno cheio de possibilidades</h2>
 <p class="sub">Conheça alguns dos momentos que fazem parte da rotina das crianças e adolescentes.</p>
