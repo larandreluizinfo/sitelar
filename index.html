@@ -24,11 +24,14 @@ main{min-height:70vh}.page{display:none;max-width:1180px;margin:auto;padding:65p
 .badge{display:inline-block;background:#ebe6dd;border-radius:999px;padding:5px 10px;font-size:.78rem;margin-bottom:8px}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px}
 .stat{font:2.5rem Georgia,serif}.quote{font:1.4rem Georgia,serif;background:#e9e5dc;padding:30px;border-radius:20px}
+.tabs{display:flex;gap:8px;margin:4px 0 26px;border-bottom:1px solid var(--line);flex-wrap:wrap}.tabs button{border:0;background:none;font-size:.92rem;padding:10px 14px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;font-weight:bold}.tabs button:hover{color:var(--accent)}.tabs button.active{color:var(--ink);border-bottom-color:var(--accent)}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.video{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(50,45,35,.04)}.video video{width:100%;height:200px;object-fit:cover;background:#d9d2c5}.video div{padding:16px}
 form{display:grid;gap:14px;max-width:720px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}input,textarea,select{width:100%;padding:13px;border:1px solid var(--line);border-radius:9px;background:#fff}textarea{min-height:130px}button.primary{background:var(--ink);color:#fff;border:0;padding:13px 20px;border-radius:8px;font-weight:bold;cursor:pointer}
 footer{background:#303330;color:#eee;padding:38px 22px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot small{color:#c7c7c7}
 .modal{display:none;position:fixed;inset:0;background:rgba(20,20,18,.55);z-index:50;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalbox{background:var(--paper);max-width:520px;width:100%;padding:30px;border-radius:20px;position:relative}.close{position:absolute;right:18px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.grid,.cards4{grid-template-columns:repeat(2,1fr)}nav{display:none}.nav{justify-content:space-between}.gallery{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.grid,.cards4,.gallery,.row{grid-template-columns:1fr}.page{padding:45px 18px}.visual{min-height:350px}}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.video{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 25px rgba(50,45,35,.04)}.video video{width:100%;height:200px;object-fit:cover;background:#d9d2c5}.video div{padding:16px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid,.cards4,.video-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}.nav{justify-content:space-between}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid,.cards4,.gallery,.row,.video-grid{grid-template-columns:1fr}.page{padding:45px 18px}.visual{min-height:350px}}
 </style>
 </head>
 <body>
@@ -40,10 +43,10 @@ footer{background:#303330;color:#eee;padding:38px 22px}.foot{max-width:1180px;ma
 <button onclick="showPage('quem')">Quem somos</button>
 <button onclick="showPage('atividades')">Atividades</button>
 <button onclick="showPage('noticias')">Notícias</button>
+<button onclick="showPage('eventos')">Eventos</button>
 <button onclick="showPage('transparencia')">Transparência</button>
 <button onclick="showPage('contato')">Contato</button>
 <button onclick="showPage('inscricao')">Inscrição</button>
-<button onclick="showPage('equipe')">Nossa equipe</button>
 <button onclick="showPage('quadra')">Quadra dos sonhos</button>
 <button onclick="showPage('aces')">Instituto ACES</button>
 </nav>
@@ -65,27 +68,40 @@ footer{background:#303330;color:#eee;padding:38px 22px}.foot{max-width:1180px;ma
 <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=700&q=80" alt="Tênis">
 <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Crianças em atividade">
 </div>
-</section>
+<div class="section-title" style="font-size:2.3rem;margin-top:55px">Vídeos com IA</div><p class="sub">Imagens em movimento das crianças e adolescentes em momentos do dia a dia no Lar André Luiz.</p>
+<div class="video-grid">
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video><div><span class="badge">Vídeo IA</span><h3>Dia de aprendizado</h3><p>Registro em movimento de um dia típico no contraturno.</p></div></div>
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"></video><div><span class="badge">Vídeo IA</span><h3>Momento de brincar</h3><p>Diversão e amizade entre as crianças e adolescentes.</p></div></div>
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video><div><span class="badge">Vídeo IA</span><h3>Unidos pelo esporte</h3><p>Movimento e cooperação nas atividades esportivas.</p></div></div>
+</div></section>
 
-<section id="quem" class="page"><div class="eyebrow">Nossa história</div><h2 class="section-title">Quem somos</h2><p class="sub">Desde 1959, o Lar André Luiz atua para oferecer acolhimento, oportunidades e desenvolvimento a crianças e adolescentes no contraturno escolar. Este espaço é apresentado como modelo institucional e pode ser adaptado com os dados oficiais da organização.</p>
-<div class="grid"><div class="card"><div class="stat">1959</div><p>Ano de fundação</p></div><div class="card"><div class="stat">+60</div><p>anos de história e compromisso</p></div><div class="card"><div class="stat">∞</div><p>possibilidades para o futuro</p></div></div></section>
+<section id="quem" class="page"><div class="eyebrow">Nossa história</div><h2 class="section-title">Quem somos</h2><p class="sub">Desde 1959, o Lar André Luiz atua para oferecer acolhimento, oportunidades e desenvolvimento a crianças e adolescentes no contraturno escolar.</p>
+<div class="tabs"><button class="active" onclick="showTab(this,'historia')">História</button><button onclick="showTab(this,'equipe')">Nossa equipe</button></div>
+<div id="tab-historia" class="tab-panel"><p>Este espaço é apresentado como modelo institucional e pode ser adaptado com os dados oficiais da organização.</p><div class="grid"><div class="card"><div class="stat">1959</div><p>Ano de fundação</p></div><div class="card"><div class="stat">+60</div><p>anos de história e compromisso</p></div><div class="card"><div class="stat">∞</div><p>possibilidades para o futuro</p></div></div></div>
+<div id="tab-equipe" class="tab-panel" style="display:none"><p>Pessoas que fazem acontecer: gestão, educadores, profissionais, voluntários e parceiros.</p><div class="grid cards4"><div class="card"><h3>Coordenação</h3><p>Gestão e acompanhamento dos projetos.</p></div><div class="card"><h3>Educadores</h3><p>Profissionais que acompanham as atividades.</p></div><div class="card"><h3>Voluntários</h3><p>Pessoas que dedicam tempo e conhecimento.</p></div><div class="card"><h3>Parceiros</h3><p>Instituições que fortalecem nossa missão.</p></div></div></div></section>
 
 <section id="atividades" class="page"><div class="eyebrow">Aprender fazendo</div><h2 class="section-title">Atividades</h2><p class="sub">Uma programação diversificada para desenvolver habilidades, vínculos e confiança.</p>
 <div class="grid">
-<div class="card activity"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Futebol"><div><span class="badge">Esportes</span><h3>Esportes</h3><p>Futebol, vôlei, beach tennis, tênis e handebol, além de atividades de movimento e convivência.</p></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Futebol"><div><span class="badge">Esportes</span><h3>Esportes</h3><p>Beach tênis, futebol, vôlei, handebol e tênis, além de atividades de movimento e convivência.</p></div></div>
 <div class="card activity"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Robótica"><div><span class="badge">Tecnologia</span><h3>Robótica</h3><p>Experimentos, programação e desafios que aproximam tecnologia, criatividade e resolução de problemas.</p></div></div>
-<div class="card activity"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80" alt="Arte"><div><span class="badge">Expressão</span><h3>Arte</h3><p>Aulas de arte e teatro para estimular imaginação, comunicação, expressão e trabalho em grupo.</p></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80" alt="Arte"><div><span class="badge">Expressão</span><h3>Arte</h3><p>Arte e teatro para estimular imaginação, comunicação, expressão e trabalho em grupo.</p></div></div>
+</div>
+<div class="section-title" style="font-size:2.3rem;margin-top:55px">Vídeos das atividades</div><p class="sub">Registros das crianças e adolescentes em ação nas atividades do Lar André Luiz.</p>
+<div class="video-grid">
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"></video><div><span class="badge">Esportes</span><h3>Momento de futebol</h3><p>Diversão, movimento e trabalho em equipe na quadra.</p></div></div>
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"></video><div><span class="badge">Esportes</span><h3>Vôlei em equipe</h3><p>Passes, cooperação e muita animação.</p></div></div>
+<div class="video"><video controls preload="metadata" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"></video><div><span class="badge">Arte</span><h3>Cenas de teatro</h3><p>Expressão, imaginação e criatividade no palco.</p></div></div>
 </div></section>
 
 <section id="noticias" class="page"><div class="eyebrow">Acompanhe</div><h2 class="section-title">Notícias</h2><div class="grid"><article class="card"><span class="badge">Esportes</span><h3>Novos desafios nas quadras</h3><p>Atividades esportivas ganham novos formatos para estimular cooperação e participação.</p></article><article class="card"><span class="badge">Tecnologia</span><h3>Ideias que viram projetos</h3><p>A turma de robótica explora soluções criativas em seus projetos.</p></article><article class="card"><span class="badge">Cultura</span><h3>Arte que transforma</h3><p>Oficinas de arte e teatro abrem espaço para novas formas de expressão.</p></article></div></section>
+
+<section id="eventos" class="page"><div class="eyebrow">Agenda</div><h2 class="section-title">Eventos</h2><p class="sub">Momentos especiais que reúnem crianças, adolescentes, famílias e comunidade.</p><div class="grid"><div class="card"><span class="badge">Cultura</span><h3>Amostra Cultural</h3><p>Um espaço para apresentar os trabalhos, talentos e criações das crianças e adolescentes.</p></div><div class="card"><span class="badge">Esportes</span><h3>Copa Arruda</h3><p>Competição esportiva que celebra o esporte, o respeito e o trabalho em equipe.</p></div><div class="card"><span class="badge">Projetos</span><h3>Projeto Semear 2030</h3><p>Iniciativa de longo prazo voltada para o desenvolvimento e novas oportunidades.</p></div></div></section>
 
 <section id="transparencia" class="page"><div class="eyebrow">Compromisso público</div><h2 class="section-title">Transparência</h2><p class="sub">Nesta área, disponibilize relatórios, documentos institucionais, prestação de contas, projetos e demais informações oficiais.</p><div class="grid"><div class="card"><h3>Relatórios</h3><p>Relatórios anuais e resultados dos projetos.</p><button class="primary" onclick="alert('Área de documentos: adicione aqui os PDFs oficiais.')">Ver documentos</button></div><div class="card"><h3>Prestação de contas</h3><p>Informações financeiras e aplicação dos recursos.</p><button class="primary" onclick="alert('Área de prestação de contas: adicione os documentos oficiais.')">Acessar</button></div><div class="card"><h3>Documentos</h3><p>Estatuto, certidões e informações institucionais.</p><button class="primary" onclick="alert('Área de documentos institucionais.')">Consultar</button></div></div></section>
 
 <section id="contato" class="page"><div class="eyebrow">Fale conosco</div><h2 class="section-title">Contato</h2><div class="grid"><div class="card"><h3>Venha conversar</h3><p>Preencha o formulário para entrar em contato com o Lar André Luiz.</p><p><strong>E-mail:</strong> contato@larandreluiz.org.br</p><p><strong>Telefone:</strong> (00) 0000-0000</p></div><div class="card" style="grid-column:span 2"><form onsubmit="sendForm(event)"><div class="row"><input required placeholder="Seu nome"><input required type="email" placeholder="Seu e-mail"></div><input placeholder="Assunto"><textarea required placeholder="Mensagem"></textarea><button class="primary">Enviar mensagem</button></form></div></div></section>
 
-<section id="inscricao" class="page"><div class="eyebrow">Participe</div><h2 class="section-title">Inscrição</h2><p class="sub">Use este formulário como ponto de partida para o cadastro de crianças e adolescentes nas atividades do contraturno.</p><form onsubmit="sendForm(event)"><div class="row"><input required placeholder="Nome do responsável"><input required placeholder="Nome da criança/adolescente"></div><div class="row"><input type="date" placeholder="Data de nascimento"><select><option>Selecione a atividade de interesse</option><option>Esportes</option><option>Robótica</option><option>Arte</option></select></div><textarea placeholder="Informações adicionais"></textarea><button class="primary">Enviar pré-inscrição</button></form></section>
-
-<section id="equipe" class="page"><div class="eyebrow">Pessoas que fazem acontecer</div><h2 class="section-title">Nossa equipe</h2><p class="sub">Apresente aqui a equipe de gestão, educadores, profissionais, voluntários e parceiros.</p><div class="grid cards4"><div class="card"><h3>Coordenação</h3><p>Gestão e acompanhamento dos projetos.</p></div><div class="card"><h3>Educadores</h3><p>Profissionais que acompanham as atividades.</p></div><div class="card"><h3>Voluntários</h3><p>Pessoas que dedicam tempo e conhecimento.</p></div><div class="card"><h3>Parceiros</h3><p>Instituições que fortalecem nossa missão.</p></div></div></section>
+<section id="inscricao" class="page"><div class="eyebrow">Participe</div><h2 class="section-title">Inscrição</h2><p class="sub">Use este formulário como ponto de partida para o cadastro de crianças e adolescentes nas atividades do contraturno.</p><form onsubmit="sendForm(event)"><div class="row"><input required placeholder="Nome do responsável"><input required placeholder="Nome da criança/adolescente"></div><input type="date" placeholder="Data de nascimento"><textarea placeholder="Informações adicionais"></textarea><button class="primary">Enviar pré-inscrição</button></form></section>
 
 <section id="quadra" class="page"><div class="hero"><div><div class="eyebrow">Nosso projeto</div><h2 class="section-title">Quadra dos sonhos</h2><p class="lead">Um espaço pensado para ampliar as oportunidades de esporte, convivência e desenvolvimento. Conte aqui a história do projeto, seus objetivos e como a comunidade pode participar.</p><button class="cta" onclick="openDonation()">Apoie este projeto</button></div><div class="visual"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80" alt="Quadra esportiva"></div></div></section>
 
@@ -99,6 +115,7 @@ footer{background:#303330;color:#eee;padding:38px 22px}.foot{max-width:1180px;ma
 <script>
 const pages=[...document.querySelectorAll('.page')];
 function showPage(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));window.scrollTo({top:0,behavior:'smooth'});history.replaceState(null,'','#'+id)}
+function showTab(btn,id){const tabs=btn.closest('.tabs');tabs.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.page.active .tab-panel').forEach(p=>p.style.display='none');document.getElementById('tab-'+id).style.display='block'}
 function openDonation(){document.getElementById('donation').classList.add('open')}
 function closeDonation(){document.getElementById('donation').classList.remove('open')}
 function sendForm(e){e.preventDefault();alert('Obrigado! Este formulário é um modelo. Para receber mensagens de verdade, conecte-o a um serviço de formulário ou backend.');e.target.reset()}
