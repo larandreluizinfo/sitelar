@@ -14,6 +14,7 @@
 <header>
 <div class="nav">
 <a class="logo" href="#inicio" onclick="showPage('inicio')"><img src="assets/images/logo.svg" alt="Lar André Luiz"><small>DESDE 1959</small></a>
+<button class="burger" onclick="toggleMenu()" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
 <nav id="menu">
 <button onclick="showPage('inicio')">Início</button>
 <button onclick="showPage('quem')">Quem somos</button>
@@ -22,6 +23,7 @@
 <button onclick="showPage('eventos')">Eventos</button>
 <button onclick="showPage('transparencia')">Transparência</button>
 <div class="dd"><button class="dd-btn" onclick="event.preventDefault()">Contato <i class="fas fa-chevron-down"></i></button><div class="dd-menu"><button onclick="showPage('fale')">Fale Conosco</button><button onclick="showPage('trabalhe')">Trabalhe Conosco</button><button onclick="showPage('inscricao')">Pré Inscrição</button></div></div>
+<button class="doe menu-doe" onclick="openDonation()">Doe aqui</button>
 </nav>
 <button class="doe" onclick="openDonation()">Doe aqui</button>
 </div>
@@ -46,7 +48,7 @@
 </div>
 </div>
 <div class="sec">
-<div class="grid" style="grid-template-columns:repeat(2,1fr)">
+<div class="grid spots-grid">
 <div class="card spot" onclick="showPage('quadra')" style="background-image:url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80')"><div class="shade"></div><div class="content"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Nosso projeto</span><h3>Quadra dos sonhos</h3><p>Um espaço para ampliar as oportunidades de esporte, convivência e desenvolvimento.</p><span class="go" style="background:var(--grad)">Conhecer →</span></div></div>
 <div class="card spot" onclick="showPage('aces')" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80')"><div class="shade"></div><div class="content"><span class="badge" style="background:var(--blue);color:#fff">Parceria e impacto</span><h3>Instituto ACES</h3><p>Conheça os projetos, ações conjuntas e a contribuição dessa parceria.</p><span class="go" style="background:var(--grad-blue)">Explorar →</span></div></div>
 </div>
@@ -169,7 +171,7 @@
 
 <div class="team-block">
 <h3 class="team-title">Voluntários e Parceiros</h3>
-<div class="team-grid">
+<div class="team-grid vol-grid">
 <div class="person"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntária"><div class="p-info"><h4>Maria Eduarda</h4><p class="role">Voluntária de Artes</p></div></div>
 <div class="person"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntário"><div class="p-info"><h4>Paulo Henrique</h4><p class="role">Voluntário Esportivo</p></div></div>
 <div class="person"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntária"><div class="p-info"><h4>Larissa Costa</h4><p class="role">Voluntária de Leitura</p></div></div>
@@ -434,12 +436,12 @@
 <button class="primary"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
 </form>
 </div>
-<div class="card map-card"><div class="map-bg"><iframe src="https://www.google.com/maps?q=Pirassununga,+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Lar André Luiz"></iframe></div>
-<div class="map-content"><div class="section-head" style="margin-bottom:20px"><h2 class="section-title" style="font-size:1.6rem">Nossa localização</h2><p class="sub">Visite o Lar André Luiz em Pirassununga/SP.</p></div>
+<div class="card map-card"><div class="map-bg"><iframe src="https://www.google.com/maps?q=R.+Alan+Kardec,+412+-+Vila+Industrial,+Pirassununga+-+SP,+13631-300,+Brasil&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Lar André Luiz"></iframe></div>
+<div class="map-content"><div class="section-head" style="margin-bottom:20px"><h2 class="section-title" style="font-size:1.6rem">Nossa localização</h2><p class="sub">Visite o Lar André Luiz em R. Alan Kardec, 412 - Vila Industrial, Pirassununga/SP.</p></div>
 <div class="contact-info">
 <p><i class="fas fa-envelope"></i> contato@larandreluiz.org.br</p>
 <p><i class="fas fa-phone"></i> (00) 0000-0000</p>
-<p><i class="fas fa-map-marker-alt"></i> Pirassununga/SP</p>
+<p><i class="fas fa-map-marker-alt"></i> R. Alan Kardec, 412 - Vila Industrial, Pirassununga - SP, 13631-300</p>
 <p><i class="fas fa-clock"></i> Segunda a sexta, contraturno escolar</p>
 </div></div>
 </div>
@@ -577,7 +579,7 @@
 </div>
 <div><h4>Institucional</h4><div class="links"><a onclick="showPage('inicio')" href="#inicio">Início</a><a onclick="showPage('quem')" href="#">Quem somos</a><a onclick="showPage('transparencia')" href="#">Transparência</a><a onclick="showPage('quadra')" href="#">Quadra dos sonhos</a><a onclick="showPage('aces')" href="#">Instituto ACES</a></div></div>
 <div><h4>O que fazemos</h4><div class="links"><a onclick="showPage('atividades')" href="#">Atividades</a><a onclick="showPage('galeria')" href="#">Galeria</a><a onclick="showPage('noticias')" href="#">Notícias</a><a onclick="showPage('eventos')" href="#">Eventos</a><a onclick="showPage('fale')" href="#">Fale Conosco</a><a onclick="showPage('trabalhe')" href="#">Trabalhe Conosco</a><a onclick="showPage('inscricao')" href="#">Pré Inscrição</a></div></div>
-<div><h4>Contato</h4><div class="links"><a href="#">contato@larandreluiz.org.br</a><a href="#">(00) 0000-0000</a><a href="#">Pirassununga/SP</a></div></div>
+<div><h4>Contato</h4><div class="links"><a href="#">contato@larandreluiz.org.br</a><a href="#">(00) 0000-0000</a><a href="#">R. Alan Kardec, 412 - Vila Industrial, Pirassununga/SP</a></div></div>
 </div>
 <div class="foot-bottom"><div><strong>Lar André Luiz</strong> — Educação, esporte e futuro</div><div>© <span id="year"></span> Lar André Luiz. Todos os direitos reservados.</div></div>
 </div>
@@ -591,7 +593,7 @@
 <h2 class="section-title" style="font-size:2.2rem">Doe aqui</h2>
 <p>Sua contribuição ajuda a manter as atividades, os materiais e as oportunidades para as crianças e adolescentes atendidos pelo Lar André Luiz.</p>
 <div class="bank-card"><h3>Depósito bancário</h3><p><strong>Banco:</strong> adicione aqui os dados oficiais.</p><p><strong>Agência:</strong> adicione aqui</p><p><strong>Conta:</strong> adicione aqui</p></div>
-<div class="don-contact"><h3>Contato</h3><p>contato@larandreluiz.org.br</p><p>(00) 0000-0000</p><p>Pirassununga/SP</p></div>
+<div class="don-contact"><h3>Contato</h3><p>contato@larandreluiz.org.br</p><p>(00) 0000-0000</p><p>R. Alan Kardec, 412 - Vila Industrial, Pirassununga - SP, 13631-300</p></div>
 </div>
 <div class="don-mid"></div>
 <div class="don-right">

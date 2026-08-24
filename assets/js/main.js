@@ -43,6 +43,8 @@ function renderCrumb(id){
 }
 function openDonation(){document.getElementById('donation').classList.add('open')}
 function closeDonation(){document.getElementById('donation').classList.remove('open')}
+function toggleMenu(){document.getElementById('menu').classList.toggle('open')}
+document.getElementById('menu').addEventListener('click',e=>{if(e.target.closest('button'))document.getElementById('menu').classList.remove('open')});
 function openTransModal(btn){
   const card=btn.closest('.trans-card');
   if(!card)return;
