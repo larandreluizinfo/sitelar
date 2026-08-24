@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lar André Luiz | Desde 1959</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+<div class="nav">
+<a class="logo" href="#inicio" onclick="showPage('inicio')"><img src="assets/images/logo.svg" alt="Lar André Luiz"><small>DESDE 1959</small></a>
+<nav id="menu">
+<button onclick="showPage('inicio')">Início</button>
+<button onclick="showPage('quem')">Quem somos</button>
+<button onclick="showPage('atividades')">Atividades</button>
+<button onclick="showPage('noticias')">Notícias</button>
+<button onclick="showPage('eventos')">Eventos</button>
+<button onclick="showPage('transparencia')">Transparência</button>
+<div class="dd"><button class="dd-btn" onclick="event.preventDefault()">Contato <i class="fas fa-chevron-down"></i></button><div class="dd-menu"><button onclick="showPage('fale')">Fale Conosco</button><button onclick="showPage('trabalhe')">Trabalhe Conosco</button><button onclick="showPage('inscricao')">Pré Inscrição</button></div></div>
+</nav>
+<button class="doe" onclick="openDonation()">Doe aqui</button>
+</div>
+</header>
+
+<main>
+<section id="inicio" class="page active">
+<div class="hero">
+<video autoplay muted loop playsinline preload="auto" src="assets/videos/hero_bg.mp4"></video>
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Educação • Esporte • Futuro</div>
+<h1>Um lugar para <span class="hero-glow">crescer.</span></h1>
+<p>O Lar André Luiz acolhe crianças e adolescentes no contraturno escolar, com atividades que estimulam convivência, criatividade, autonomia e novas possibilidades.</p>
+<a class="cta" href="#atividades" onclick="showPage('atividades')">Conheça nossas atividades</a>
+<div class="hero-stats">
+<div class="hstat"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg><span>Desde 1959</span></div>
+<div class="hstat"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg><span>+10.000 de vidas atendidas</span></div>
+<div class="hstat"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg><span>+40 atividades diferentes</span></div>
+<div class="hstat"><svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg><span>Esporte, arte e tecnologia</span></div>
+</div>
+</div>
+</div>
+<div class="sec">
+<div class="grid" style="grid-template-columns:repeat(2,1fr)">
+<div class="card spot" onclick="showPage('quadra')" style="background-image:url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80')"><div class="shade"></div><div class="content"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Nosso projeto</span><h3>Quadra dos sonhos</h3><p>Um espaço para ampliar as oportunidades de esporte, convivência e desenvolvimento.</p><span class="go" style="background:var(--grad)">Conhecer →</span></div></div>
+<div class="card spot" onclick="showPage('aces')" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80')"><div class="shade"></div><div class="content"><span class="badge" style="background:var(--blue);color:#fff">Parceria e impacto</span><h3>Instituto ACES</h3><p>Conheça os projetos, ações conjuntas e a contribuição dessa parceria.</p><span class="go" style="background:var(--grad-blue)">Explorar →</span></div></div>
+</div>
+</div>
+<div class="sec" style="padding-top:8px">
+<div class="section-head"><h2 class="section-title">Um contraturno cheio de possibilidades</h2><p class="sub">Conheça alguns dos momentos que fazem parte da rotina das crianças e adolescentes.</p></div>
+<div class="mosaic">
+<div class="photo big"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Aulas de arte e pintura"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Atividades de construção"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Treino de tênis"></div>
+<div class="photo port"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Hora da leitura"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Esportes na quadra"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Oficina de dança"></div>
+<div class="photo land two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Aula de robótica"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Trabalho em equipe"></div>
+<div class="photo land two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Passeio de bicicleta"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Esporte e movimento"></div>
+<div class="photo big"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Momento de leitura"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Teatro e expressão"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Atividades escolares"></div>
+<div class="photo port"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Ateliê de artes"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Oficina de ciências"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Coral do Lar"></div>
+<div class="photo land two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Ginástica e alongamento"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Aprendizado em grupo"></div>
+<div class="photo land two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1545622783-b3e021430fee?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Vôlei em equipe"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Recreação ao ar livre"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Sala de aula"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Hora do conto"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Futebol entre amigos"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Convivência e amizade"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Passeio ao parque"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Momento de lazer"></div>
+<div class="photo land"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Aulas de arte e pintura"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Atividades de construção"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Treino de tênis"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Hora da leitura"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Esportes na quadra"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Oficina de dança"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Aula de robótica"></div>
+<div class="photo small two"><img style="animation-delay:-3s" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Trabalho em equipe"><img style="animation-delay:-9s" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Passeio de bicicleta"></div>
+<div class="photo land"><img style="animation-delay:-4s" src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Esporte e movimento"><img style="animation-delay:-10s" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Momento de leitura"><img style="animation-delay:-16s" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="" data-cap="Teatro e expressão"></div>
+</div>
+</div>
+<section class="cta-doe" style="margin:8px auto 48px">
+<div class="cta-card">
+<div class="cta-blob b1"></div>
+<div class="cta-blob b2"></div>
+<div class="cta-text">
+<div class="cta-eyebrow" style="background:var(--yellow-light);color:var(--ink)">Faça a diferença</div>
+<h2>Sua doação transforma vidas</h2>
+<p>Ajude a manter as atividades, os materiais e as oportunidades para as crianças e adolescentes atendidos pelo Lar André Luiz.</p>
+<button class="cta-btn" onclick="openDonation()">Doe aqui</button>
+</div>
+<div class="cta-img"><img src="assets/images/menino.png" alt="Criança atendida pelo Lar André Luiz"></div>
+</div>
+</section>
+<div class="sec" style="padding-top:8px">
+<div class="section-head"><h2 class="section-title">Projetos das oficinas de tecnologia</h2><p class="sub">Os projetos criados pelas crianças nas aulas de robótica e programação, transformando ideias em soluções.</p></div>
+<div class="tech-carousel"><div class="tech-track">
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Robô seguidor de linha</h3><span class="kids">Ana • Pedro • Sofia</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Braço robótico</h3><span class="kids">Lucas • Maria • Enzo</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Semáforo inteligente</h3><span class="kids">Gabriel • Helena</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Jogo da cobrinha</h3><span class="kids">Rafael • Beatriz • Caio</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Site do Lar</h3><span class="kids">Juliana • Davi</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Controle de temperatura</h3><span class="kids">Théo • Alice • Laura</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Planetário digital</h3><span class="kids">Matheus • Camila</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Máquina de desenhar</h3><span class="kids">Isabela • Pedro</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Alarme de presença</h3><span class="kids">Vinícius • Sofia • Lívia</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1535378620166-273708d44e4c?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Quiz de perguntas</h3><span class="kids">Eduardo • Valentina</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Robô coletor de lixo</h3><span class="kids">Nicolas • Bianca • Igor</span></div></div>
+<div class="tech-card" style="background-image:url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80')"><div class="shade"></div><div class="inner"><h3>Aplicativo de doação</h3><span class="kids">Manuela • André</span></div></div>
+</div></div>
+<div class="tech-controls"><button class="tech-nav tech-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button><button class="tech-nav tech-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button></div>
+<div class="tech-dots" id="techDots"></div>
+</div>
+<div style="height:48px"></div>
+</section>
+
+<section id="quem" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" alt="Crianças em atividade">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Nossa história</div>
+<h1>Quem somos</h1>
+<p>Fundada em 16 de setembro de 1959, a União Municipal Espírita de Pirassununga (UMEP) — Lar André Luiz — atua há mais de 67 anos acolhendo crianças e adolescentes em situação de vulnerabilidade social no contraturno escolar.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div>
+<div class="section-head"><div class="eyebrow">Desde 1959</div><h2 class="section-title">História</h2><p class="sub">Mais de seis décadas de acolhimento, educação e transformação social.</p></div>
+<div style="max-width:800px;margin-bottom:40px"><p style="font-size:1.05rem;color:var(--muted);line-height:1.8">Fundada em <strong>16 de setembro de 1959</strong> por um grupo espírita, a instituição surgiu com o objetivo de auxiliar famílias carentes da região. No início, operava como um orfanato voltado exclusivamente para meninos. Com o tempo, transformou-se no <em>Educandário Giovani Bosco</em> e, posteriormente, consolidou-se no modelo atual: atendimento de <strong>contraturno escolar</strong>, garantindo desenvolvimento e segurança dos jovens durante o tempo livre.</p></div>
+<div class="grid cards4">
+<div class="card"><div class="stat">1959</div><p>Ano de fundação</p></div>
+<div class="card" style="border-top-color:var(--blue);"><div class="stat" style="background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent">+60</div><p>anos de história e compromisso</p></div>
+<div class="card" style="border-top-color:var(--yellow);"><div class="stat" style="background:linear-gradient(90deg,#f59e0b,#ffd13d);-webkit-background-clip:text;background-clip:text;color:transparent">100%</div><p>dedicação ao desenvolvimento infantil</p></div>
+<div class="card" style="border-top-color:var(--red);"><div class="stat" style="background:var(--grad-red);-webkit-background-clip:text;background-clip:text;color:transparent">∞</div><p>possibilidades para o futuro</p></div>
+</div>
+</div>
+<div class="narrative">
+<div class="nar-text">
+<div class="section-head" style="margin-bottom:18px"><div class="eyebrow">Nossa Trajetória</div><h2 class="section-title">Do gesto de acolher à rede de cuidado</h2></div>
+<p>Tudo começou com um gesto simples: abrir as portas para quem precisava de um lugar seguro. O que era acolhimento pontual transformou-se, ao longo dos anos, em uma instituição estruturada, com projetos permanentes nas áreas do esporte, da arte, da educação e da garantia de direitos.</p>
+<p>Nossa história é construída em parceria com famílias, voluntários, poder público e empresas que acreditam que cuidado gera futuro. Cada conquista é coletiva — e cada pessoa que passa por aqui deixa sua marca.</p>
+</div>
+<div class="nar-img"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Crianças aprendendo e sendo acolhidas"></div>
+</div>
+<div>
+<div class="section-head"><div class="eyebrow">Nossos pilares</div><h2 class="section-title">Missão, Visão e Valores</h2><p class="sub">Os princípios que guiam cada ação da instituição.</p></div>
+<div style="margin-bottom:36px"><p style="font-size:1.05rem;color:var(--muted);line-height:1.8"><strong>Essência e diretrizes:</strong> todo o trabalho do Lar André Luiz nasce de valores humanos fundamentais — associação, amizade, convivência, empatia e solidariedade. Eles não são apenas palavras: orientam cada projeto, cada núcleo de atendimento e cada relação construída com as famílias e a comunidade. É por isso que, mais do que assistência, a instituição busca criar vínculos que acompanham a criança para além do contraturno escolar.</p></div>
+<div class="grid">
+<div class="card"><h3>Missão</h3><div class="mv-icon"><svg viewBox="0 0 24 24" style="stroke:var(--green-dark)"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><p>Auxiliar as famílias na composição de renda e organização familiar, assegurando um ambiente seguro e voltado para o desenvolvimento integral das crianças e adolescentes no período em que não estão na escola.</p></div>
+<div class="card" style="border-top-color:var(--blue)"><h3>Visão</h3><div class="mv-icon"><svg viewBox="0 0 24 24" style="stroke:var(--blue)"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div><p>Ser referência em educação complementar, ampliando possibilidades e transformando vidas. Capacidade atual: 60 assistidos diretos, com impacto estimado em milhares de jovens ao longo de 67 anos de atuação.</p></div>
+<div class="card" style="border-top-color:var(--red)"><h3>Valores</h3><div class="mv-icon"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><p>Respeito, acolhimento, responsabilidade, cooperação, criatividade e compromisso com a comunidade. Acreditamos que cada criança e adolescente merece oportunidades para construir um futuro melhor.</p></div>
+</div>
+</div>
+<div>
+<div class="section-head"><div class="eyebrow">Quem faz acontecer</div><h2 class="section-title">Equipe</h2><p class="sub">Pessoas dedicadas que tornam os projetos possíveis todos os dias.</p></div>
+
+<div class="team-block">
+<h3 class="team-title">Coordenação</h3>
+<div class="team-row">
+<div class="person"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Coordenadora"><div class="p-info"><h4>Ana Beatriz Carvalho</h4><p class="role">Coordenadora Geral</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Coordenador"><div class="p-info"><h4>Rafael Moreira</h4><p class="role">Coordenador Pedagógico</p></div></div>
+</div>
+</div>
+
+<div class="team-block">
+<h3 class="team-title">Educadores</h3>
+<div class="team-grid">
+<div class="person"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Educadora esportiva"><div class="p-info"><h4>Juliana Santos</h4><p class="role">Educadora Esportiva</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Educador de tecnologia"><div class="p-info"><h4>Marcos Oliveira</h4><p class="role">Educador de Tecnologia</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Educadora cultural"><div class="p-info"><h4>Camila Ferreira</h4><p class="role">Educadora Cultural</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Educador ambiental"><div class="p-info"><h4>Diego Almeida</h4><p class="role">Educador Ambiental</p></div></div>
+</div>
+</div>
+
+<div class="team-block">
+<h3 class="team-title">Voluntários e Parceiros</h3>
+<div class="team-grid">
+<div class="person"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntária"><div class="p-info"><h4>Maria Eduarda</h4><p class="role">Voluntária de Artes</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntário"><div class="p-info"><h4>Paulo Henrique</h4><p class="role">Voluntário Esportivo</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntária"><div class="p-info"><h4>Larissa Costa</h4><p class="role">Voluntária de Leitura</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Voluntário"><div class="p-info"><h4>Bruno Rocha</h4><p class="role">Voluntário de Tecnologia</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Parceira"><div class="p-info"><h4>Fernanda Lima</h4><p class="role">Parceira Institucional</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Parceiro"><div class="p-info"><h4>André Souza</h4><p class="role">Parceiro Empresarial</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Parceiro"><div class="p-info"><h4>Carlos Eduardo</h4><p class="role">Parceiro de Educação</p></div></div>
+<div class="person"><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=400&q=80&h=500&crop=faces" alt="Parceira"><div class="p-info"><h4>Marina Alves</h4><p class="role">Parceira de Saúde</p></div></div>
+</div>
+</div>
+
+<div class="team-block">
+<div class="section-head" style="margin-bottom:20px"><div class="eyebrow">Quem caminha com a gente</div><h2 class="section-title">Parcerias</h2><p class="sub">Empresas e instituições que contribuem de alguma forma com o Lar André Luiz.</p></div>
+<div class="logo-carousel"><button class="logo-nav logo-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button><div class="logo-track">
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#10b981"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg><span class="lg-name" style="color:#10b981">VerdaTech</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#3b82f6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg><span class="lg-name" style="color:#3b82f6">AzulMax</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span class="lg-name" style="color:#d97706">SolRaio</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#ef4444"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg><span class="lg-name" style="color:#ef4444">CoraBem</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#8b5cf6"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm2.83 13.83l-1.58-1.59L10 16.58 8.41 15 6.83 16.59 10 19.75l4.83-4.83z"/></svg><span class="lg-name" style="color:#8b5cf6">PrismaTech</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#047857"><path d="M12 2l2.4 4.8L20 8l-4 4.8.9 5.7-4.9-2.6-4.9 2.6.9-5.7L4 8l5.6-1.2z"/></svg><span class="lg-name" style="color:#047857">TerraVerde</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#0ea5e9"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lg-name" style="color:#0284c7">MarAzul</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#d97706"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span class="lg-name" style="color:#b45309">Dourado</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#ec4899"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span class="lg-name" style="color:#db2777">TechRosa</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#22c55e"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg><span class="lg-name" style="color:#16a34a">EnergiaViva</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#92400e"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2zm-4 10c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V5h10v8z"/></svg><span class="lg-name" style="color:#92400e">Café Bom</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#0d9488"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg><span class="lg-name" style="color:#0d9488">LivroVivo</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#6366f1"><path d="M12 2l8 4v6c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V6l8-4z"/></svg><span class="lg-name" style="color:#6366f1">PixelJúnior</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#e11d48"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 8h-4v4h-4v-4H6v-2h4V5h4v4h4v2z"/></svg><span class="lg-name" style="color:#e11d48">Saúde Total</span></div>
+<div class="logo-item"><svg viewBox="0 0 24 24" style="fill:#0891b2"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg><span class="lg-name" style="color:#0891b2">RedeConecta</span></div>
+</div><button class="logo-nav logo-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button></div>
+<div class="logo-dots" id="logoDots"></div>
+</div>
+
+<div class="team-block">
+<div class="section-head" style="margin-bottom:20px"><div class="eyebrow">Governança</div><h2 class="section-title">Diretoria</h2><p class="sub">Gestão totalmente voluntária de um conselho diretivo e fiscal, com eleições a cada dois anos.</p></div>
+<div class="dir-pyramid">
+<div class="dir-level"><div class="dir-person"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Presidente"><div class="d-info"><strong>Carlos Alberto</strong><small>Presidente</small></div></div></div>
+<div class="dir-connector"></div>
+<div class="dir-level"><div class="dir-person"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Vice-presidente"><div class="d-info"><strong>Mariana Rocha</strong><small>Vice-presidente</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Secretária"><div class="d-info"><strong>Felipe Nogueira</strong><small>1º Secretário</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Tesoureira"><div class="d-info"><strong>Patrícia Lima</strong><small>Tesoureira</small></div></div></div>
+<div class="dir-connector"></div>
+<div class="dir-level"><div class="dir-person"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheiro"><div class="d-info"><strong>Ricardo Souza</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheira"><div class="d-info"><strong>Ana Paula</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheiro"><div class="d-info"><strong>João Pedro</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheira"><div class="d-info"><strong>Luciana</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheiro"><div class="d-info"><strong>André Menezes</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheira"><div class="d-info"><strong>Fernanda</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheiro"><div class="d-info"><strong>Bruno Carvalho</strong><small>Conselho Fiscal</small></div></div><div class="dir-person"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=200&h=200&crop=faces&q=80" alt="Conselheiro"><div class="d-info"><strong>Rafael Duarte</strong><small>Conselho Fiscal</small></div></div></div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="atividades" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=1600&q=80" alt="Atividades">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Aprender fazendo</div>
+<h1>Atividades</h1>
+<p>O atendimento é segmentado em quatro núcleos principais para abranger as diversas habilidades e potencialidades dos assistidos.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div class="split activity-split">
+<div class="split-col"><h3 class="split-title">Núcleos</h3>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Esportes"><div><span class="badge" style="background:var(--blue);color:#fff">Esportivo</span><h3>Esportes de Base</h3><p>Esportes de raquete, futebol, vôlei, handebol e ginástica rítmica. O projeto Instituto ACES fortalece o ensino de esportes de raquete com ações conjuntas.</p><a href="#aces" onclick="showPage('aces')" class="activity-link">Saiba mais</a></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Robótica"><div><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Tecnológico</span><h3>Robótica e Programação</h3><p>Aulas de robótica e programação, viabilizadas por meio do apoio de colégios parceiros. Aproximando tecnologia, criatividade e resolução de problemas.</p><a href="#" class="activity-link">Saiba mais</a></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80" alt="Horta"><div><span class="badge" style="background:var(--green-primary);color:#fff">Ambiental</span><h3>Sustentabilidade</h3><p>Foco em sustentabilidade com cultivo de horta e práticas de coleta seletiva na instituição. Conscientização ecológica e trabalho em equipe.</p><a href="#" class="activity-link">Saiba mais</a></div></div>
+</div>
+<div class="split-col"><h3 class="split-title">Oficinas</h3>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=80" alt="Cultura"><div><span class="badge" style="background:var(--red);color:#fff">Cultural</span><h3>Dança, Teatro e Canto</h3><p>Aulas de dança, teatro, canto e oficinas de grafite para estimular expressão, comunicação e trabalho em grupo.</p><a href="#" class="activity-link">Saiba mais</a></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80" alt="Música"><div><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Cultural</span><h3>Música e Grafite</h3><p>Coral, ritmos e instrumentos para expressar emoções. Oficinas de grafite para arte urbana e expressão visual.</p><a href="#" class="activity-link">Saiba mais</a></div></div>
+<div class="card activity"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Convivência"><div><span class="badge" style="background:var(--blue);color:#fff">Convivência</span><h3>Espaço de Convivência</h3><p>Ambiente seguro para socialização, leitura e atividades livres que fortalecem os vínculos entre as crianças e adolescentes.</p><a href="#" class="activity-link">Saiba mais</a></div></div>
+</div>
+</div>
+<div style="margin-top:32px">
+<div class="section-head"><div class="eyebrow">Em movimento</div><h2 class="section-title">Registros das nossas atividades</h2><p class="sub">As crianças e adolescentes em ação no esporte, na arte e na tecnologia.</p></div>
+<div class="gallery-mosaic" style="margin-top:24px">
+<div class="gallery-tile wide"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Momento de futebol"><span class="tile-date"><i class="fas fa-calendar-alt"></i>14 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Momento de futebol</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1545622783-b3e021430fee?auto=format&fit=crop&w=900&q=80" alt="Vôlei em equipe"><span class="tile-date"><i class="fas fa-calendar-alt"></i>21 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Vôlei em equipe</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Hora da robótica"><span class="tile-date"><i class="fas fa-calendar-alt"></i>06 mai 2025</span><div class="tile-cap"><span>Tecnologia</span><h3>Hora da robótica</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80" alt="Oficina de teatro"><span class="tile-date"><i class="fas fa-calendar-alt"></i>09 mai 2025</span><div class="tile-cap"><span>Arte</span><h3>Oficina de teatro</h3></div></div>
+<div class="gallery-tile wide"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Coral do Lar"><span class="tile-date"><i class="fas fa-calendar-alt"></i>16 mai 2025</span><div class="tile-cap"><span>Música</span><h3>Coral do Lar</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80" alt="Dia de horta"><span class="tile-date"><i class="fas fa-calendar-alt"></i>07 mai 2025</span><div class="tile-cap"><span>Ambiental</span><h3>Dia de horta</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Espaço de convivência"><span class="tile-date"><i class="fas fa-calendar-alt"></i>28 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Espaço de convivência</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="Ginástica rítmica"><span class="tile-date"><i class="fas fa-calendar-alt"></i>12 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Ginástica rítmica</h3></div></div>
+<div class="gallery-tile wide"><img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=900&q=80" alt="Passeio ao parque"><span class="tile-date"><i class="fas fa-calendar-alt"></i>30 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Passeio ao parque</h3></div></div>
+<div class="gallery-tile wide"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=900&q=80" alt="Ateliê de artes"><span class="tile-date"><i class="fas fa-calendar-alt"></i>08 mai 2025</span><div class="tile-cap"><span>Arte</span><h3>Ateliê de artes</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=900&q=80" alt="Recreação"><span class="tile-date"><i class="fas fa-calendar-alt"></i>02 mai 2025</span><div class="tile-cap"><span>Convivência</span><h3>Recreação</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80" alt="Hora da leitura"><span class="tile-date"><i class="fas fa-calendar-alt"></i>23 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Hora da leitura</h3></div></div>
+</div>
+<div class="gallery-cta-row"><a class="gallery-cta" href="#galeria" onclick="showPage('galeria')">Ver galeria completa</a></div>
+</div>
+<div style="margin-top:40px">
+<div class="section-head"><div class="eyebrow">Na tela</div><h2 class="section-title">Vídeos</h2><p class="sub">Momentos em movimento: relembre os melhores registros em vídeo.</p></div>
+<div class="video-carousel" style="margin-top:20px"><div class="video-track">
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--blue);color:#fff">Esportes</span><h3>Momento de futebol</h3><p>Diversão, movimento e trabalho em equipe na quadra.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--blue);color:#fff">Esportes</span><h3>Vôlei em equipe</h3><p>Passes, cooperação e muita animação.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--red);color:#fff">Arte</span><h3>Cenas de teatro</h3><p>Expressão, imaginação e criatividade no palco.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Tecnologia</span><h3>Aula de robótica</h3><p>Programação, montagem e muita criatividade.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Música</span><h3>Coral do Lar</h3><p>Vozes e ritmos em harmonia na aula de canto.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--green-primary);color:#fff">Ambiental</span><h3>Dia de horta</h3><p>Plantando, cuidando e aprendendo sobre a natureza.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--blue);color:#fff">Esportes</span><h3>Ginástica rítmica</h3><p>Alongamento, equilíbrio e leveza no movimento.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--red);color:#fff">Arte</span><h3>Grafite na parede</h3><p>Arte urbana e expressão visual pelas paredes do Lar.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--blue);color:#fff">Convivência</span><h3>Hora do conto</h3><p>Histórias, leitura e imaginação no espaço de convivência.</p></div></div>
+<div class="video-card"><video controls preload="metadata" src="assets/videos/hero_bg.mp4"></video><div class="video-cap"><span class="badge" style="background:var(--blue);color:#fff">Esportes</span><h3>Treino de raquete</h3><p>Ritmo, precisão e foco com os esportes do Instituto ACES.</p></div></div>
+</div></div>
+<div class="video-controls"><button class="video-nav video-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button><button class="video-nav video-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button></div>
+<div class="video-dots" id="videoDots"></div>
+</div>
+</div>
+</section>
+
+<section id="galeria" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1600&q=80" alt="Galeria">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Dia a dia</div>
+<h1>Galeria de Atividades</h1>
+<p>Registros do cotidiano: os momentos que fazem parte da rotina das crianças e adolescentes do Lar André Luiz.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div class="gallery-mosaic">
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Momento de futebol"><span class="tile-date"><i class="fas fa-calendar-alt"></i>14 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Momento de futebol</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1545622783-b3e021430fee?auto=format&fit=crop&w=900&q=80" alt="Vôlei em equipe"><span class="tile-date"><i class="fas fa-calendar-alt"></i>21 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Vôlei em equipe</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Hora da robótica"><span class="tile-date"><i class="fas fa-calendar-alt"></i>06 mai 2025</span><div class="tile-cap"><span>Tecnologia</span><h3>Hora da robótica</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80" alt="Oficina de teatro"><span class="tile-date"><i class="fas fa-calendar-alt"></i>09 mai 2025</span><div class="tile-cap"><span>Arte</span><h3>Oficina de teatro</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Coral do Lar"><span class="tile-date"><i class="fas fa-calendar-alt"></i>16 mai 2025</span><div class="tile-cap"><span>Música</span><h3>Coral do Lar</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80" alt="Dia de horta"><span class="tile-date"><i class="fas fa-calendar-alt"></i>07 mai 2025</span><div class="tile-cap"><span>Ambiental</span><h3>Dia de horta</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Espaço de convivência"><span class="tile-date"><i class="fas fa-calendar-alt"></i>28 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Espaço de convivência</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="Ginástica rítmica"><span class="tile-date"><i class="fas fa-calendar-alt"></i>12 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Ginástica rítmica</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=900&q=80" alt="Passeio ao parque"><span class="tile-date"><i class="fas fa-calendar-alt"></i>30 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Passeio ao parque</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=900&q=80" alt="Ateliê de artes"><span class="tile-date"><i class="fas fa-calendar-alt"></i>08 mai 2025</span><div class="tile-cap"><span>Arte</span><h3>Ateliê de artes</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=900&q=80" alt="Recreação"><span class="tile-date"><i class="fas fa-calendar-alt"></i>02 mai 2025</span><div class="tile-cap"><span>Convivência</span><h3>Recreação</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=900&q=80" alt="Tênis de mesa"><span class="tile-date"><i class="fas fa-calendar-alt"></i>19 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Tênis de mesa</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" alt="Refeitório"><span class="tile-date"><i class="fas fa-calendar-alt"></i>05 mai 2025</span><div class="tile-cap"><span>Convivência</span><h3>Refeitório</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80" alt="Hora da leitura"><span class="tile-date"><i class="fas fa-calendar-alt"></i>23 abr 2025</span><div class="tile-cap"><span>Convivência</span><h3>Hora da leitura</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=80" alt="Oficina de grafite"><span class="tile-date"><i class="fas fa-calendar-alt"></i>15 mai 2025</span><div class="tile-cap"><span>Arte</span><h3>Oficina de grafite</h3></div></div>
+<div class="gallery-tile"><img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=900&q=80" alt="Treino de raquete"><span class="tile-date"><i class="fas fa-calendar-alt"></i>22 mai 2025</span><div class="tile-cap"><span>Esportes</span><h3>Treino de raquete</h3></div></div>
+</div>
+</div>
+</section>
+
+<section id="noticias" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80" alt="Notícias">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Acompanhe</div>
+<h1>Notícias</h1>
+<p>Fique por dentro das novidades e dos projetos que transformam vidas no Lar André Luiz.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div class="news-hero" onclick="showPage('noticias')">
+<img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1200&q=80" alt="Festa do Dia das Crianças">
+<div class="overlay"></div>
+<div class="hero-content">
+<span class="badge" style="background:var(--green-primary);color:#fff">Destaque</span>
+<h2>Festa do Dia das Crianças reúne turmas e famílias no Lar</h2>
+<p>Uma manhã de brincadeiras, apresentações e confraternização marcou a festa do Dia das Crianças na sede, com a participação das famílias e de toda a equipe.</p>
+<span class="read-more">Ler notícia completa</span>
+</div>
+</div>
+
+<div class="news-grid">
+<article class="news-card"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Robótica"><div class="card-body"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Tecnológico</span><h3>Robótica com colégios parceiros</h3><p>Alunos desenvolvem projetos de programação e robótica com apoio de colégios parceiros, explorando soluções criativas e tecnologia acessível.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1560421683-6856ea585c78?auto=format&fit=crop&w=600&q=80" alt="Grafite"><div class="card-body"><span class="badge" style="background:var(--red);color:#fff">Cultural</span><h3>Oficinas de grafite e teatro</h3><p>Novas oficinas de arte urbana e expressão cênica abrem espaço para que crianças e adolescentes expressem sua criatividade e visão de mundo.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Horta"><div class="card-body"><span class="badge" style="background:var(--green-primary);color:#fff">Ambiental</span><h3>Horta comunitária entra em produção</h3><p>A nova horta da instituição entra em fase de colheita. Crianças aprendem sobre sustentabilidade e alimentação saudável com as mãos na terra.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Música"><div class="card-body"><span class="badge" style="background:var(--blue);color:#fff">Cultural</span><h3>Coral infantil se apresenta em evento municipal</h3><p>O coral do Lar André Luiz se apresentou na Praça de Eventos da cidade, levando música e alegria para toda a comunidade pirassuninguense.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Convivência"><div class="card-body"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Convivência</span><h3>Passeio educativo ao parque municipal</h3><p>Crianças e adolescentes participaram de um passeio educativo ao parque, combinando contato com a natureza e atividades ao ar livre.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1574607383476-f517f260d30b?auto=format&fit=crop&w=600&q=80" alt="Doação"><div class="card-body"><span class="badge" style="background:var(--red);color:#fff">Social</span><h3>Campanha de arrecadação atinge meta</h3><p>A campanha solidária superou expectativas com doações de roupas, alimentos e material escolar para as crianças da instituição.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Tecnologia"><div class="card-body"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Tecnológico</span><h3>Oficina de tecnologia abre novas inscrições</h3><p>Robótica, programação e jogos digitais: a oficina de tecnologia abre vagas para novos participantes e amplia o contraturno.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80" alt="Esportes"><div class="card-body"><span class="badge" style="background:var(--blue);color:#fff">Esportivo</span><h3>Copa Arruda reúne turmas em dia de esporte</h3><p>As turmas do Lar André Luiz se enfrentaram em uma manhã de jogos, torcida e espírito de equipe nas quadras da instituição.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80" alt="Voluntários"><div class="card-body"><span class="badge" style="background:var(--green-primary);color:#fff">Ambiental</span><h3>Voluntários plantam novas mudas na horta</h3><p>Um mutirão com voluntários ampliou a horta da instituição com novas mudas, fortalecendo as práticas de sustentabilidade.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Ginástica"><div class="card-body"><span class="badge" style="background:var(--blue);color:#fff">Esportivo</span><h3>Novas turmas de ginástica rítmica</h3><p>As turmas de ginástica rítmica cresceram com novas alunas, que já treinam rotinas para as apresentações de fim de ano.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Famílias"><div class="card-body"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Convivência</span><h3>Encontro com as famílias na sede</h3><p>Famílias dos atendidos participaram de um encontro na sede, com atividades, conversa e integração entre comunidade e instituição.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+
+<article class="news-card"><img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&q=80" alt="Desenho"><div class="card-body"><span class="badge" style="background:var(--red);color:#fff">Cultural</span><h3>Concurso de desenho incentiva criatividade</h3><p>O concurso de desenho mobilizou crianças e adolescentes, que soltaram a imaginação com temas sobre o cotidiano do Lar.</p><a href="#" class="card-link">Saiba mais</a></div></article>
+</div></div></section>
+
+<section id="eventos" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80" alt="Eventos">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Agenda</div>
+<h1>Eventos</h1>
+<p>Momentos especiais que reúnem crianças, adolescentes, famílias e comunidade ao longo do ano.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div class="grid"><div class="card"><span class="badge" style="background:var(--red);color:#fff">Cultural</span><h3>Amostra Cultural</h3><p>Um espaço para apresentar os trabalhos, talentos e criações das crianças e adolescentes. Dança, teatro, canto e artes visuais em um evento aberto à comunidade.</p></div><div class="card" style="border-top-color:var(--blue)"><span class="badge" style="background:var(--blue);color:#fff">Esportivo</span><h3>Copa Arruda</h3><p>Competição esportiva interna que celebra o esporte, o respeito e o trabalho em equipe. Momento de integração entre todas as turmas da instituição.</p></div><div class="card" style="border-top-color:var(--yellow)"><span class="badge" style="background:var(--yellow-light);color:var(--ink)">Projetos</span><h3>Semear 2030</h3><p>Iniciativa de longo prazo voltada para o desenvolvimento e novas oportunidades. Um plano para ampliar o impacto social nos próximos anos.</p></div></div>
+</div></section>
+
+<section id="transparencia" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" alt="Transparência">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Compromisso público</div>
+<h1>Transparência</h1>
+<p>A prestação de contas do Lar André Luiz é pública, rigorosa e detalhada. Os recursos são captados por meio de telemarketing próprio e editais públicos ou de incentivo.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:64px">
+<div class="section-head"><div class="eyebrow">Compromisso público</div><h2 class="section-title">Prestação de contas</h2><p class="sub">Acompanhe mês a mês os recursos que entram e saem no Lar André Luiz. Veja o último mês em destaque e o histórico dos períodos anteriores.</p></div>
+<div style="display:grid;gap:28px">
+<div class="card trans-card trans-destaque" data-month="Abril de 2025" data-in="+ R$ 35.600" data-out="− R$ 33.200" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 17.600" data-out-items="Alimentação: R$ 12.300;Educadores: R$ 14.900;Materiais: R$ 3.300;Despesas fixas: R$ 2.700" data-files="assets/prestacao-contas/abril-2025.pdf|Balancete Abril de 2025;assets/prestacao-contas/abril-2025-extrato.pdf|Extrato Abril de 2025"><span class="badge" style="background:var(--green-primary);color:#fff">Abril</span><span class="badge dest-badge" style="background:var(--yellow-light);color:var(--ink)">Último mês</span><h3>Abril de 2025</h3><div class="destaque-flex"><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 35.600</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 33.200</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 2.400</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="grid trans-grid">
+<div class="card trans-card" data-month="Março de 2025" data-in="+ R$ 38.200" data-out="− R$ 31.500" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 20.200" data-out-items="Alimentação: R$ 11.700;Educadores: R$ 14.200;Materiais: R$ 3.200;Despesas fixas: R$ 2.400" data-files="assets/prestacao-contas/marco-2025.pdf|Balancete Março de 2025;assets/prestacao-contas/marco-2025-extrato.pdf|Extrato Março de 2025"><span class="badge" style="background:var(--green-primary);color:#fff">Março</span><h3>Março de 2025</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 38.200</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 31.500</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 6.700</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Fevereiro de 2025" data-in="+ R$ 32.900" data-out="− R$ 30.100" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 14.900" data-out-items="Alimentação: R$ 11.100;Educadores: R$ 13.500;Materiais: R$ 3.000;Despesas fixas: R$ 2.500" data-files="assets/prestacao-contas/fevereiro-2025.pdf|Balancete Fevereiro de 2025;assets/prestacao-contas/fevereiro-2025-extrato.pdf|Extrato Fevereiro de 2025"><span class="badge" style="background:var(--green-primary);color:#fff">Fevereiro</span><h3>Fevereiro de 2025</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 32.900</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 30.100</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 2.800</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Janeiro de 2025" data-in="+ R$ 34.500" data-out="− R$ 29.800" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 16.500" data-out-items="Alimentação: R$ 11.000;Educadores: R$ 13.400;Materiais: R$ 3.000;Despesas fixas: R$ 2.400" data-files="assets/prestacao-contas/janeiro-2025.pdf|Balancete Janeiro de 2025;assets/prestacao-contas/janeiro-2025-extrato.pdf|Extrato Janeiro de 2025"><span class="badge" style="background:var(--green-primary);color:#fff">Janeiro</span><h3>Janeiro de 2025</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 34.500</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 29.800</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 4.700</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Dezembro de 2024" data-in="+ R$ 36.400" data-out="− R$ 34.900" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 18.400" data-out-items="Alimentação: R$ 12.900;Educadores: R$ 15.700;Materiais: R$ 3.500;Despesas fixas: R$ 2.800" data-files="assets/prestacao-contas/dezembro-2024.pdf|Balancete Dezembro de 2024;assets/prestacao-contas/dezembro-2024-extrato.pdf|Extrato Dezembro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Dezembro</span><h3>Dezembro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 36.400</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 34.900</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.500</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Novembro de 2024" data-in="+ R$ 33.100" data-out="− R$ 31.200" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 15.100" data-out-items="Alimentação: R$ 11.500;Educadores: R$ 14.000;Materiais: R$ 3.100;Despesas fixas: R$ 2.600" data-files="assets/prestacao-contas/novembro-2024.pdf|Balancete Novembro de 2024;assets/prestacao-contas/novembro-2024-extrato.pdf|Extrato Novembro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Novembro</span><h3>Novembro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 33.100</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 31.200</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.900</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Outubro de 2024" data-in="+ R$ 35.800" data-out="− R$ 32.600" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 17.800" data-out-items="Alimentação: R$ 12.100;Educadores: R$ 14.700;Materiais: R$ 3.300;Despesas fixas: R$ 2.500" data-files="assets/prestacao-contas/outubro-2024.pdf|Balancete Outubro de 2024;assets/prestacao-contas/outubro-2024-extrato.pdf|Extrato Outubro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Outubro</span><h3>Outubro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 35.800</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 32.600</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 3.200</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Setembro de 2024" data-in="+ R$ 34.200" data-out="− R$ 33.400" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 16.200" data-out-items="Alimentação: R$ 12.400;Educadores: R$ 15.000;Materiais: R$ 3.300;Despesas fixas: R$ 2.700" data-files="assets/prestacao-contas/setembro-2024.pdf|Balancete Setembro de 2024;assets/prestacao-contas/setembro-2024-extrato.pdf|Extrato Setembro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Setembro</span><h3>Setembro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 34.200</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 33.400</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 800</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Agosto de 2024" data-in="+ R$ 37.500" data-out="− R$ 35.100" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 19.500" data-out-items="Alimentação: R$ 13.000;Educadores: R$ 15.800;Materiais: R$ 3.500;Despesas fixas: R$ 2.800" data-files="assets/prestacao-contas/agosto-2024.pdf|Balancete Agosto de 2024;assets/prestacao-contas/agosto-2024-extrato.pdf|Extrato Agosto de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Agosto</span><h3>Agosto de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 37.500</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 35.100</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 2.400</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Julho de 2024" data-in="+ R$ 32.700" data-out="− R$ 30.400" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 14.700" data-out-items="Alimentação: R$ 11.200;Educadores: R$ 13.700;Materiais: R$ 3.000;Despesas fixas: R$ 2.500" data-files="assets/prestacao-contas/julho-2024.pdf|Balancete Julho de 2024;assets/prestacao-contas/julho-2024-extrato.pdf|Extrato Julho de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Julho</span><h3>Julho de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 32.700</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 30.400</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 2.300</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Junho de 2024" data-in="+ R$ 33.900" data-out="− R$ 31.800" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 15.900" data-out-items="Alimentação: R$ 11.800;Educadores: R$ 14.300;Materiais: R$ 3.200;Despesas fixas: R$ 2.500" data-files="assets/prestacao-contas/junho-2024.pdf|Balancete Junho de 2024;assets/prestacao-contas/junho-2024-extrato.pdf|Extrato Junho de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Junho</span><h3>Junho de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 33.900</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 31.800</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 2.100</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Maio de 2024" data-in="+ R$ 36.100" data-out="− R$ 34.300" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 18.100" data-out-items="Alimentação: R$ 12.700;Educadores: R$ 15.400;Materiais: R$ 3.400;Despesas fixas: R$ 2.800" data-files="assets/prestacao-contas/maio-2024.pdf|Balancete Maio de 2024;assets/prestacao-contas/maio-2024-extrato.pdf|Extrato Maio de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Maio</span><h3>Maio de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 36.100</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 34.300</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.800</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Abril de 2024" data-in="+ R$ 31.800" data-out="− R$ 29.900" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 13.800" data-out-items="Alimentação: R$ 11.100;Educadores: R$ 13.500;Materiais: R$ 3.000;Despesas fixas: R$ 2.300" data-files="assets/prestacao-contas/abril-2024.pdf|Balancete Abril de 2024;assets/prestacao-contas/abril-2024-extrato.pdf|Extrato Abril de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Abril</span><h3>Abril de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 31.800</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 29.900</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.900</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Março de 2024" data-in="+ R$ 34.600" data-out="− R$ 33.100" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 16.600" data-out-items="Alimentação: R$ 12.200;Educadores: R$ 14.900;Materiais: R$ 3.300;Despesas fixas: R$ 2.700" data-files="assets/prestacao-contas/marco-2024.pdf|Balancete Março de 2024;assets/prestacao-contas/marco-2024-extrato.pdf|Extrato Março de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Março</span><h3>Março de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 34.600</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 33.100</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.500</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Fevereiro de 2024" data-in="+ R$ 30.200" data-out="− R$ 29.400" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 12.200" data-out-items="Alimentação: R$ 10.900;Educadores: R$ 13.200;Materiais: R$ 2.900;Despesas fixas: R$ 2.400" data-files="assets/prestacao-contas/fevereiro-2024.pdf|Balancete Fevereiro de 2024;assets/prestacao-contas/fevereiro-2024-extrato.pdf|Extrato Fevereiro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Fevereiro</span><h3>Fevereiro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 30.200</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 29.400</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 800</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+<div class="card trans-card" data-month="Janeiro de 2024" data-in="+ R$ 33.300" data-out="− R$ 31.600" data-in-items="Telemarketing: R$ 8.000;Projeto CMDCA: R$ 10.000;Contraturno e doações: R$ 15.300" data-out-items="Alimentação: R$ 11.700;Educadores: R$ 14.200;Materiais: R$ 3.200;Despesas fixas: R$ 2.500" data-files="assets/prestacao-contas/janeiro-2024.pdf|Balancete Janeiro de 2024;assets/prestacao-contas/janeiro-2024-extrato.pdf|Extrato Janeiro de 2024"><span class="badge" style="background:var(--green-primary);color:#fff">Janeiro</span><h3>Janeiro de 2024</h3><div class=""><div class="trans-line"><span>Entradas</span><strong class="up">+ R$ 33.300</strong></div><div class="trans-line"><span>Saídas</span><strong class="down">− R$ 31.600</strong></div><div class="trans-balance"><span>Saldo do mês</span><strong>R$ 1.700</strong></div></div><button class="activity-link" onclick="openTransModal(this)">Saiba mais</button></div>
+</div>
+</div>
+</div></section>
+
+<section id="fale" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80" alt="Fale Conosco">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Fale conosco</div>
+<h1>Fale Conosco</h1>
+<p>A União Municipal Espírita de Pirassununga (UMEP) — Lar André Luiz — está à disposição para dúvidas, parcerias e informações.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:40px">
+<div class="contact-grid">
+<div class="card"><div class="section-head" style="margin-bottom:24px"><h2 class="section-title" style="font-size:1.6rem">Envie sua mensagem</h2><p class="sub">Preencha o formulário e retornaremos o mais breve possível.</p></div>
+<form onsubmit="sendForm(event)" class="modern-form">
+<label><span>Seu nome</span><div class="field"><i class="fas fa-user"></i><input required placeholder="Como podemos te chamar?"></div></label>
+<label><span>Seu e-mail</span><div class="field"><i class="fas fa-envelope"></i><input required type="email" placeholder="voce@email.com"></div></label>
+<label><span>Assunto</span><div class="field"><i class="fas fa-tag"></i><input placeholder="Sobre o que quer falar?"></div></label>
+<label><span>Mensagem</span><div class="field"><i class="fas fa-comment"></i><textarea required placeholder="Escreva sua mensagem aqui..."></textarea></div></label>
+<button class="primary"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+</form>
+</div>
+<div class="card map-card"><div class="map-bg"><iframe src="https://www.google.com/maps?q=Pirassununga,+SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Lar André Luiz"></iframe></div>
+<div class="map-content"><div class="section-head" style="margin-bottom:20px"><h2 class="section-title" style="font-size:1.6rem">Nossa localização</h2><p class="sub">Visite o Lar André Luiz em Pirassununga/SP.</p></div>
+<div class="contact-info">
+<p><i class="fas fa-envelope"></i> contato@larandreluiz.org.br</p>
+<p><i class="fas fa-phone"></i> (00) 0000-0000</p>
+<p><i class="fas fa-map-marker-alt"></i> Pirassununga/SP</p>
+<p><i class="fas fa-clock"></i> Segunda a sexta, contraturno escolar</p>
+</div></div>
+</div>
+</div>
+</div></section>
+
+<section id="trabalhe" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80" alt="Trabalhe Conosco">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Faça parte</div>
+<h1>Trabalhe Conosco</h1>
+<p>Venha construir um futuro melhor junto com a gente. Envie seu currículo e conte sua história.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:40px">
+<div class="form-side">
+<div class="card">
+<div class="section-head" style="margin-bottom:24px"><h2 class="section-title" style="font-size:1.6rem">Formulário de candidatura</h2><p class="sub">Preencha seus dados e anexe seu currículo para participar de nossos processos seletivos.</p></div>
+<form onsubmit="sendForm(event)" class="modern-form">
+<label><span>Nome completo</span><div class="field"><i class="fas fa-user"></i><input required placeholder="Seu nome completo"></div></label>
+<div class="form-row">
+<label><span>E-mail</span><div class="field"><i class="fas fa-envelope"></i><input required type="email" placeholder="voce@email.com"></div></label>
+<label><span>Telefone</span><div class="field"><i class="fas fa-phone"></i><input required placeholder="(00) 00000-0000"></div></label>
+</div>
+<label><span>Área de atuação</span><div class="field"><i class="fas fa-briefcase"></i><select required><option value="" disabled selected>Selecione a área</option><option>Educação e Pedagogia</option><option>Psicologia</option><option>Esportes e Recreação</option><option>Tecnologia e Informática</option><option>Artes e Cultura</option><option>Administrativo</option><option>Serviços Gerais</option></select></div></label>
+<label><span>Conte um pouco sobre você</span><div class="field"><i class="fas fa-comment"></i><textarea required placeholder="Fale sobre sua experiência, formação e por que quer trabalhar no Lar André Luiz..."></textarea></div></label>
+<label><span>Currículo (PDF, DOC ou DOCX)</span><div class="file-input"><input type="file" accept=".pdf,.doc,.docx" onchange="this.closest('.file-input').classList.add('has-file')"><span class="file-label"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg><span class="file-text">Clique para anexar seu currículo</span></span></div></label>
+<button class="primary"><i class="fas fa-paper-plane"></i> Enviar candidatura</button>
+</form>
+</div>
+<div class="side-img">
+<img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="Trabalhe no Lar André Luiz">
+<div class="overlay"></div>
+<div class="side-cap"><h3>Faça parte da nossa equipe</h3><p>Junte-se a uma equipe comprometida em transformar a vida de crianças e adolescentes.</p></div>
+</div>
+</div>
+</div></section>
+
+<section id="inscricao" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80" alt="Pré Inscrição">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Participe</div>
+<h1>Pré Inscrição</h1>
+<p>O Lar André Luiz atende crianças e adolescentes em situação de vulnerabilidade social, com acesso por demanda espontânea, CRAS, CREAS e Conselho Tutelar.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:40px">
+<div class="form-side">
+<div class="card">
+<div class="section-head" style="margin-bottom:24px"><h2 class="section-title" style="font-size:1.6rem">Dados do responsável</h2><p class="sub">Preencha as informações do responsável legal e das crianças que deseja inscrever.</p></div>
+<form onsubmit="sendForm(event)" id="preForm" class="modern-form">
+<label><span>Nome do responsável</span><div class="field"><i class="fas fa-user"></i><input required placeholder="Nome completo do responsável"></div></label>
+<div class="form-row">
+<label><span>E-mail</span><div class="field"><i class="fas fa-envelope"></i><input required type="email" placeholder="voce@email.com"></div></label>
+<label><span>Telefone</span><div class="field"><i class="fas fa-phone"></i><input required placeholder="(00) 00000-0000"></div></label>
+</div>
+<label><span>Como chegou até nós?</span><div class="field"><i class="fas fa-sign-in-alt"></i><select required><option value="" disabled selected>Selecione uma opção</option><option>Demanda espontânea</option><option>CRAS</option><option>CREAS</option><option>Conselho Tutelar</option></select></div></label>
+
+<div class="section-head" style="margin:20px 0 16px"><h3 style="font-size:1.15rem;margin:0">Crianças / adolescentes</h3><p class="sub" style="font-size:.9rem">Adicione as crianças que deseja inscrever.</p></div>
+<div class="children-list" id="childrenList"></div>
+<button type="button" class="btn-add-child" onclick="addChild()"><i class="fas fa-plus"></i> Adicionar criança</button>
+
+<button class="primary" style="margin-top:22px"><i class="fas fa-paper-plane"></i> Enviar pré-inscrição</button>
+</form>
+</div>
+<div class="side-img">
+<img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80" alt="Pré Inscrição">
+<div class="overlay"></div>
+<div class="side-cap"><h3>Vagas para o contraturno</h3><p>Garanta um ambiente seguro e cheio de oportunidades para sua criança.</p></div>
+</div>
+</div>
+</div></section>
+
+<section id="quadra" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80" alt="Quadra">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink)">Nosso projeto</div>
+<h1>Quadra dos sonhos</h1>
+<p>Um espaço pensado para ampliar as oportunidades de esporte, convivência e desenvolvimento. A quadra é o coração das atividades esportivas do Lar André Luiz, abrigando futebol, vôlei, handebol e os esportes de raquete do Instituto ACES.</p>
+<button class="cta" onclick="openDonation()" style="margin-top:22px;background:var(--yellow-light);color:var(--ink)">Apoie este projeto</button>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:48px">
+<div class="section-head"><div class="eyebrow">Por que apoiar?</div><h2 class="section-title">Impacto do projeto</h2><p class="sub">Cada contribuição ajuda a manter e expandir as atividades esportivas para mais crianças e adolescentes.</p></div>
+<div class="grid">
+<div class="card"><div class="stat">60</div><p>Crianças e adolescentes atendidos diretamente na quadra</p></div>
+<div class="card" style="border-top-color:var(--blue)"><div class="stat" style="background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent">4</div><p>Modalidades esportivas diferentes praticadas no espaço</p></div>
+<div class="card" style="border-top-color:var(--yellow)"><div class="stat" style="background:linear-gradient(90deg,#f59e0b,#ffd13d);-webkit-background-clip:text;background-clip:text;color:transparent">ACES</div><p>Parceria com o Instituto ACES para esportes de raquete</p></div>
+</div>
+</div></section>
+
+<section id="aces" class="page">
+<div class="hero" style="min-height:440px">
+<video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" src="assets/videos/hero_bg.mp4"></video>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80" alt="Instituto ACES">
+<div class="overlay"></div>
+<div class="hero-inner">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink);">Parceria e impacto</div>
+<h1>Instituto ACES</h1>
+<p>O Instituto ACES é um parceiro estratégico do Lar André Luiz, responsável pelo projeto de esportes de raquete que beneficia crianças e adolescentes atendidos pela instituição.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:auto;padding:64px 24px;display:grid;gap:48px">
+<div>
+<div class="quote" style="border-left-color:var(--green-primary)">“Quando diferentes pessoas e instituições se unem, novas oportunidades podem nascer.”</div>
+</div>
+<div class="grid">
+<div class="card"><h3>O que é o ACES?</h3><p>O Instituto ACES desenvolve projetos esportivos focados em esportes de raquete, trazendo para o Lar André Luiz aulas regulares e competições que estimulam disciplina, coordenação motora e trabalho em equipe.</p></div>
+<div class="card" style="border-top-color:var(--blue)"><h3>Como funciona</h3><p>As aulas são ministradas por monitores qualificados nas quadras da instituição. As crianças e adolescentes têm contato com tênis, badminton e outras modalidades de raquete de forma acessível e inclusiva.</p></div>
+<div class="card" style="border-top-color:var(--yellow)"><h3>Resultados</h3><p>O projeto já impactou dezenas de jovens, oferecendo não apenas atividade física, mas também novas possibilidades de desenvolvimento pessoal e até oportunidades em campeonatos regionais.</p></div>
+</div>
+<div class="section-head"><div class="eyebrow">Financiamento</div><h2 class="section-title">Lei de Incentivo ao Esporte</h2><p class="sub">O projeto Instituto ACES é financiado por meio da Lei de Incentivo ao Esporte, com valor aproximado de R$ 270.000,00.</p></div>
+</div></section>
+</main>
+
+<footer>
+<div class="foot">
+<div class="foot-grid">
+<div class="brand"><h4>Lar André Luiz</h4><small>Desde 1959 • Educação, esporte e futuro</small><p>Há mais de seis décadas acolhendo crianças e adolescentes no contraturno escolar, com educação, esporte, cultura e tecnologia.</p>
+<div class="social">
+<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 11-2.9 0 1.4 1.4 0 012.9 0z"/></svg></a>
+<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+<a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 00-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.2c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.2A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg></a>
+<a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-2-1.2 7.6 7.6 0 01-1.4-1.7c-.1-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.5 4 1.6.6 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.6-.4z"/></svg></a>
+</div>
+</div>
+<div><h4>Institucional</h4><div class="links"><a onclick="showPage('inicio')" href="#inicio">Início</a><a onclick="showPage('quem')" href="#">Quem somos</a><a onclick="showPage('transparencia')" href="#">Transparência</a><a onclick="showPage('quadra')" href="#">Quadra dos sonhos</a><a onclick="showPage('aces')" href="#">Instituto ACES</a></div></div>
+<div><h4>O que fazemos</h4><div class="links"><a onclick="showPage('atividades')" href="#">Atividades</a><a onclick="showPage('galeria')" href="#">Galeria</a><a onclick="showPage('noticias')" href="#">Notícias</a><a onclick="showPage('eventos')" href="#">Eventos</a><a onclick="showPage('fale')" href="#">Fale Conosco</a><a onclick="showPage('trabalhe')" href="#">Trabalhe Conosco</a><a onclick="showPage('inscricao')" href="#">Pré Inscrição</a></div></div>
+<div><h4>Contato</h4><div class="links"><a href="#">contato@larandreluiz.org.br</a><a href="#">(00) 0000-0000</a><a href="#">Pirassununga/SP</a></div></div>
+</div>
+<div class="foot-bottom"><div><strong>Lar André Luiz</strong> — Educação, esporte e futuro</div><div>© <span id="year"></span> Lar André Luiz. Todos os direitos reservados.</div></div>
+</div>
+</footer>
+
+<div class="modal" id="donation"><div class="modalbox donbox"><button class="close" onclick="closeDonation()">×</button>
+<img class="don-bg" src="assets/images/menino2.png" alt="Criança atendida pelo Lar André Luiz">
+<div class="don-grid">
+<div class="don-left">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink)">Faça parte</div>
+<h2 class="section-title" style="font-size:2.2rem">Doe aqui</h2>
+<p>Sua contribuição ajuda a manter as atividades, os materiais e as oportunidades para as crianças e adolescentes atendidos pelo Lar André Luiz.</p>
+<div class="bank-card"><h3>Depósito bancário</h3><p><strong>Banco:</strong> adicione aqui os dados oficiais.</p><p><strong>Agência:</strong> adicione aqui</p><p><strong>Conta:</strong> adicione aqui</p></div>
+<div class="don-contact"><h3>Contato</h3><p>contato@larandreluiz.org.br</p><p>(00) 0000-0000</p><p>Pirassununga/SP</p></div>
+</div>
+<div class="don-mid"></div>
+<div class="don-right">
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink)">Pix</div>
+<p>Doe em segundos, de onde estiver, escaneando o QR code abaixo.</p>
+<p class="pix-key">Chave PIX: <strong>adicione aqui a chave</strong></p>
+<div class="qr"><svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR Code PIX"><rect width="29" height="29" fill="#fff"/><g fill="#0f1226"><rect x="0" y="0" width="7" height="7"/><rect x="1" y="1" width="5" height="5" fill="#fff"/><rect x="2" y="2" width="3" height="3"/><rect x="22" y="0" width="7" height="7"/><rect x="23" y="1" width="5" height="5" fill="#fff"/><rect x="24" y="2" width="3" height="3"/><rect x="0" y="22" width="7" height="7"/><rect x="1" y="23" width="5" height="5" fill="#fff"/><rect x="2" y="24" width="3" height="3"/><rect x="8" y="0" width="1" height="1"/><rect x="10" y="0" width="1" height="1"/><rect x="12" y="0" width="1" height="1"/><rect x="14" y="0" width="1" height="1"/><rect x="16" y="0" width="1" height="1"/><rect x="18" y="0" width="1" height="1"/><rect x="20" y="0" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="11" y="2" width="1" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="15" y="2" width="1" height="1"/><rect x="17" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="21" y="2" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="10" y="4" width="1" height="1"/><rect x="12" y="5" width="1" height="1"/><rect x="14" y="3" width="1" height="1"/><rect x="16" y="4" width="1" height="1"/><rect x="18" y="5" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="12" y="7" width="1" height="1"/><rect x="14" y="7" width="1" height="1"/><rect x="17" y="7" width="1" height="1"/><rect x="19" y="7" width="1" height="1"/><rect x="21" y="7" width="1" height="1"/><rect x="8" y="8" width="1" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="13" y="8" width="1" height="1"/><rect x="16" y="8" width="1" height="1"/><rect x="18" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/><rect x="11" y="10" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="17" y="10" width="1" height="1"/><rect x="21" y="10" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="12" y="11" width="1" height="1"/><rect x="14" y="11" width="1" height="1"/><rect x="16" y="11" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="8" y="13" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="15" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="20" y="13" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="9" y="14" width="1" height="1"/><rect x="11" y="14" width="1" height="1"/><rect x="14" y="14" width="1" height="1"/><rect x="17" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="21" y="14" width="1" height="1"/><rect x="8" y="16" width="1" height="1"/><rect x="12" y="16" width="1" height="1"/><rect x="15" y="16" width="1" height="1"/><rect x="17" y="16" width="1" height="1"/><rect x="20" y="16" width="1" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="10" y="17" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="16" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="21" y="17" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="14" y="19" width="1" height="1"/><rect x="16" y="19" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/><rect x="20" y="19" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="13" y="20" width="1" height="1"/><rect x="15" y="20" width="1" height="1"/><rect x="17" y="20" width="1" height="1"/><rect x="21" y="20" width="1" height="1"/><rect x="7" y="21" width="1" height="1"/><rect x="9" y="21" width="1" height="1"/><rect x="11" y="21" width="1" height="1"/><rect x="14" y="21" width="1" height="1"/><rect x="18" y="21" width="1" height="1"/><rect x="8" y="22" width="1" height="1"/><rect x="10" y="22" width="1" height="1"/><rect x="13" y="22" width="1" height="1"/><rect x="15" y="22" width="1" height="1"/><rect x="18" y="22" width="1" height="1"/><rect x="20" y="22" width="1" height="1"/><rect x="9" y="23" width="1" height="1"/><rect x="12" y="23" width="1" height="1"/><rect x="14" y="23" width="1" height="1"/><rect x="17" y="23" width="1" height="1"/><rect x="19" y="23" width="1" height="1"/><rect x="21" y="23" width="1" height="1"/><rect x="8" y="25" width="1" height="1"/><rect x="10" y="25" width="1" height="1"/><rect x="12" y="25" width="1" height="1"/><rect x="15" y="25" width="1" height="1"/><rect x="17" y="25" width="1" height="1"/><rect x="20" y="25" width="1" height="1"/><rect x="9" y="26" width="1" height="1"/><rect x="11" y="26" width="1" height="1"/><rect x="14" y="26" width="1" height="1"/><rect x="16" y="26" width="1" height="1"/><rect x="19" y="26" width="1" height="1"/><rect x="21" y="26" width="1" height="1"/><rect x="8" y="27" width="1" height="1"/><rect x="13" y="27" width="1" height="1"/><rect x="15" y="27" width="1" height="1"/><rect x="18" y="27" width="1" height="1"/><rect x="20" y="27" width="1" height="1"/><rect x="9" y="28" width="1" height="1"/><rect x="11" y="28" width="1" height="1"/><rect x="14" y="28" width="1" height="1"/><rect x="16" y="28" width="1" height="1"/><rect x="19" y="28" width="1" height="1"/><rect x="21" y="28" width="1" height="1"/></g></svg></div>
+</div>
+</div>
+<div class="don-note"><i class="fas fa-info-circle"></i>Caso precise de recibo, entre em contato.</div>
+</div></div>
+
+<div class="modal" id="imgModal"><div class="modalbox imgbox"><button class="close" onclick="closeImgModal()">×</button>
+<div class="gal-imgwrap">
+<button class="gal-nav gal-prev" onclick="imgGalleryPrev()" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+<img id="imgModalImg" src="" alt="Imagem do mosaico">
+<button class="gal-nav gal-next" onclick="imgGalleryNext()" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+</div>
+<p id="imgModalCap"></p>
+<div class="gal-dots" id="galDots"></div>
+</div></div>
+
+<div class="modal" id="transModal"><div class="modalbox"><button class="close" onclick="closeTransModal()">×</button>
+<div class="eyebrow" style="background:var(--yellow-light);color:var(--ink)">Prestação de contas</div>
+<h2 class="section-title" style="font-size:1.9rem" id="transMonth">Janeiro de 2025</h2>
+<div class="trans-detail-lines">
+<div class="trans-line"><span>Entradas</span><strong class="up" id="transIn">+ R$ 0</strong></div>
+<div class="trans-line"><span>Saídas</span><strong class="down" id="transOut">− R$ 0</strong></div>
+</div>
+<div class="trans-cols">
+<div class="trans-col"><h4><i class="fas fa-arrow-down"></i> Entradas</h4><ul id="transInItems"></ul></div>
+<div class="trans-col"><h4><i class="fas fa-arrow-up"></i> Saídas</h4><ul id="transOutItems"></ul></div>
+</div>
+<h4 class="trans-files-title">Arquivos do mês</h4>
+<ul class="trans-files" id="transFiles"></ul>
+</div></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
