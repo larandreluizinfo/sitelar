@@ -49,6 +49,8 @@ function openTransModal(btn){
   const card=btn.closest('.trans-card');
   if(!card)return;
   document.getElementById('transMonth').textContent=card.dataset.month;
+  const titleEl=document.getElementById('transTitle');
+  if(titleEl)titleEl.textContent=card.dataset.title||('Balancete '+card.dataset.month);
   document.getElementById('transIn').textContent=card.dataset.in;
   document.getElementById('transOut').textContent=card.dataset.out;
   fillList(document.getElementById('transInItems'),(card.dataset.inItems||'').split(';'),'up');
@@ -306,4 +308,74 @@ function setupPagination(container,perPage,firstOnly){
 }
 setupPagination(document.querySelector('#galeria .gallery-mosaic'),12);
 setupPagination(document.querySelector('.news-grid'),9,[document.querySelector('#noticias .news-hero')]);
-setupPagination(document.querySelector('.trans-grid'),9,[document.querySelector('.trans-destaque')]);
+
+/* ========== TRANSPARÊNCIA - ABAS POR CATEGORIA/ANO/MÊS ========== */
+(function(){
+  const tabsEl=document.getElementById('transTabs');
+  const yearTabsEl=document.getElementById('transYearTabs');
+  const contentEl=document.getElementById('transContent');
+  if(!tabsEl||!yearTabsEl||!contentEl)return;
+
+  const cats=[
+    {id:'institucional',label:'Institucional',color:'var(--green-primary)'},
+    {id:'cmdca',label:'CMDCA',color:'var(--blue)'},
+    {id:'smdhcj',label:'SMDHCJ',color:'var(--red)'},
+    {id:'emendas',label:'Emendas Parlamentares',color:'var(--yellow)'}
+  ];
+  const years=[2025,2024,2023];
+  const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+  function rand(base){return Math.round((base+Math.random()*base*.3-base*.15)/100)*100}
+  const data={};
+  cats.forEach(c=>{data[c.id]={};years.forEach(y=>{data[c.id][y]=months.map(m=>{
+    const baseIn=c.id==='institucional'?34000:c.id==='cmdca'?10000:c.id==='smdhcj'?8000:12000;
+    const baseOut=baseIn*(.85+Math.random()*.1);
+    const inp=rand(baseIn);const outp=rand(baseOut);
+    return{month:m+' de '+y,in:inp,out:outp,balance:inp-outp,
+      inItems:c.id==='institucional'?`Telemarketing: R$ 8.000;Contraturno e doações: R$ ${(inp-8000).toLocaleString('pt-BR')}`
+        :c.id==='cmdca'?`Projeto CMDCA: R$ ${inp.toLocaleString('pt-BR')}`
+        :c.id==='smdhcj'?`SMDHCJ: R$ ${inp.toLocaleString('pt-BR')}`
+        :`Emenda Parlamentar: R$ ${inp.toLocaleString('pt-BR')}`,
+      outItems:c.id==='institucional'?`Alimentação: R$ ${(outp*.37).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Educadores: R$ ${(outp*.44).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Materiais: R$ ${(outp*.1).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Despesas fixas: R$ ${(outp*.09).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}`
+        :c.id==='cmdca'?`Materiais pedagógicos: R$ ${(outp*.32).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Atividades culturais: R$ ${(outp*.38).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Transporte: R$ ${(outp*.3).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}`
+        :c.id==='smdhcj'?`Alimentação: R$ ${(outp*.37).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Educadores: R$ ${(outp*.35).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Materiais: R$ ${(outp*.28).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}`
+        :`Manutenção: R$ ${(outp*.38).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Materiais: R$ ${(outp*.32).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};Equipamentos: R$ ${(outp*.3).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}`,
+      file:c.id+'/'+m.toLowerCase().replace(/ã/g,'a').replace(/ç/g,'c')+'-'+y+'.pdf',
+      badgeColor:c.color
+    };
+  })})});
+
+  let activeCat='institucional',activeYear=2025;
+
+  function fmt(v){return(v>=0?'+ ':'− ')+'R$ '+Math.abs(v).toLocaleString('pt-BR')}
+
+  function renderTabs(){
+    tabsEl.innerHTML=`<div class="trans-dropdowns"><select class="trans-select" onchange="window._transSwitch(this.value)">${cats.map(c=>`<option value="${c.id}" ${c.id===activeCat?'selected':''}>${c.label}</option>`).join('')}</select><select class="trans-select" onchange="window._transYearSwitch(+this.value)">${years.map(y=>`<option value="${y}" ${y===activeYear?'selected':''}>${y}</option>`).join('')}</select></div>`;
+  }
+  function renderYearTabs(){yearTabsEl.innerHTML=''}
+  function renderContent(){
+    const m=data[activeCat][activeYear];
+    const catLabel=(cats.find(c=>c.id===activeCat)||{}).label||activeCat;
+    contentEl.innerHTML=`<div class="trans-months">${m.map((d,i)=>{
+      const titulo=`Balancete ${catLabel} - ${d.month}`;
+      const filePath=`assets/prestacao-contas/${d.file}`;
+      const fileName=`Balancete ${d.month}.pdf`;
+      return`<div class="card trans-card" data-title="${titulo}" data-month="${d.month}" data-in="${fmt(d.in)}" data-out="${fmt(d.out)}" data-in-items="${d.inItems}" data-out-items="${d.outItems}" data-files="${filePath}|${titulo}"><span class="badge" style="background:${d.badgeColor};color:${d.badgeColor==='var(--yellow)'?'var(--ink)':'#fff'}">${d.month.split(' ')[0]}</span><h3>${titulo}</h3><div class="trans-meta"><span>Arquivo:</span><a class="trans-file-link" href="${filePath}" download onclick="event.stopPropagation()"><i class="fas fa-file-pdf"></i>${fileName}</a></div></div>`;
+    }).join('')}</div>`;
+  }
+
+  window._transSwitch=function(cat){activeCat=cat;renderTabs();renderYearTabs();renderContent()};
+  window._transYearSwitch=function(y){activeYear=y;renderYearTabs();renderContent()};
+
+  renderTabs();renderYearTabs();renderContent();
+})();
+
+/* ========== ANIMAÇÕES DE SCROLL ========== */
+(function(){
+  const els=document.querySelectorAll('.fade-up,.fade-in,.scale-in');
+  if(!els.length)return;
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>obs.observe(el));
+})();
