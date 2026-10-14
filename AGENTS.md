@@ -30,11 +30,16 @@
 
 ## 4. Ambiente local em 1 comando
 
-- Comando: `setup.bat` (na raiz; localiza o PHP do Laragon sozinho).
+- Windows: `setup.bat` (localiza o PHP do Laragon sozinho).
+- Linux / hospedagem (só PHP + composer, sem npm): `./setup.sh`
+  ou direto `php tools/setup.php`.
 - Lógica: `tools/setup.php` — idempotente (só faz o que falta).
   Baixa o WP-CLI e o núcleo se preciso, cria `wp-config.php` + banco,
   instala o WP, ativa o tema, importa as páginas de `layout/index.html`
   (leitura!), configura o ícone e verifica o resultado.
+- `--nativo`: PHP puro, sem WP-CLI e sem `exec()` — para hospedagem
+  compartilhada com funções desabilitadas. Ativado sozinho se `exec()`
+  estiver indisponível.
 - Opções: `--fresh` (APAGA o banco e reinstala — nunca em produção),
   `--skip-import`, `--skip-verify`, `--dry-run`, `--help`.
 - Config por ambiente: `LAR_DB_NAME`, `LAR_DB_USER`, `LAR_DB_PASS`,
