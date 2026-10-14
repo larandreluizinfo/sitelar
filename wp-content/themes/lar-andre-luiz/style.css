@@ -1,0 +1,399 @@
+/*
+Theme Name: Lar André Luiz
+Theme URI: http://sitelar.test
+Author: Lar André Luiz
+Author URI: http://sitelar.test
+Description: Tema institucional do Lar André Luiz. Cada seção do site é uma Página do WordPress com URL própria (/atividades/, /transparencia/...), menu real e navegação sem JavaScript. O layout visual é carregado de assets/css/style.css.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lar-andre-luiz
+Tags: institucional, sem-hash, paginas-estaticas, acessivel, formulario
+*/
+
+/*
+ * Este arquivo existe apenas para declarar o tema no WordPress.
+ * O design system completo está em assets/css/style.css.
+ * As regras abaixo são as únicas adaptações ao markup do WordPress.
+ */
+
+/* ---------------------------------------------------------------
+ * Proteção: a classe "page" no <body>
+ *
+ * O template antigo usava <section class="page"> e escondia as seções
+ * com display:none. No WordPress, body_class() aplica a classe "page"
+ * no <body> de qualquer página — e a regra .page{display:none} do
+ * design system esconderia o site inteiro. As regras do SPA foram
+ * removidas de assets/css/style.css; esta linha evita que a mesma
+ * regra volte a ser aplicada por engano.
+ * --------------------------------------------------------------- */
+.page,
+.page.active,
+.page.leaving {
+	display: block;
+}
+
+/* ---------------------------------------------------------------
+ * Conteúdo de página (post_content)
+ * Remove a animação de "troca de página" que existia no SPA
+ * e garante o mesmo espaçamento dos <div> do template antigo.
+ * --------------------------------------------------------------- */
+.page-wrap {
+	display: block;
+	animation: larPageIn 0.45s ease both;
+}
+
+@keyframes larPageIn {
+	from { opacity: 0; transform: translateY(14px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------------
+ * Acessibilidade: foco visível nos links do menu e do conteúdo
+ * --------------------------------------------------------------- */
+#menu a:focus-visible,
+.nav .burger:focus-visible,
+.page-wrap a:focus-visible,
+footer a:focus-visible,
+.modal a:focus-visible,
+.modal button:focus-visible {
+	outline: 3px solid var(--yellow, #ffd13d);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+/* O botão "Doe aqui" é único, fora do <nav> (header.php). */
+
+/* ---------------------------------------------------------------
+ * Submenu (Contato) - mantém o visual do dropdown original
+ * O CSS base estiliza #menu button (o SPA usava botões).
+ * Aqui adaptamos para <a>, mantendo o dropdown CSS puro
+ * (:hover / :focus-within), sem depender de JavaScript.
+ * --------------------------------------------------------------- */
+#menu .dd-menu,
+#menu .sub-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: var(--shadow);
+	padding: 6px;
+	min-width: 180px;
+	z-index: 40;
+}
+
+#menu .dd-menu::before {
+	content: '';
+	position: absolute;
+	top: -14px;
+	left: 0;
+	right: 0;
+	height: 14px;
+}
+
+/* Abre com mouse OU com foco por teclado (acessível sem JS). */
+#menu li.menu-item-has-children:hover > .dd-menu,
+#menu li.menu-item-has-children:focus-within > .dd-menu,
+#menu li.menu-item-has-children.is-open > .dd-menu {
+	display: block;
+}
+
+#menu li.menu-item-has-children {
+	position: relative;
+}
+
+#menu .dd-menu a {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 10px 14px;
+	border-radius: 8px;
+	font-size: .88rem;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+#menu .dd-menu a:hover,
+#menu .dd-menu a:focus {
+	background: #ecfdf5;
+	color: var(--green-dark);
+}
+
+/* Item de menu com página atual */
+#menu a.current-menu-item > span,
+#menu li.current-menu-item > a > span,
+#menu li.current_page_item > a > span {
+	color: var(--green-dark, #065f46);
+	font-weight: 700;
+}
+
+#menu li.current-menu-item > a::after,
+#menu li.current_page_item > a::after {
+	content: "";
+	position: absolute;
+	left: 14px;
+	right: 14px;
+	bottom: 2px;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--grad, linear-gradient(90deg, #047857, #10b981));
+}
+
+#menu li.current-menu-item,
+#menu li.current_page_item {
+	position: relative;
+}
+
+/* ---------------------------------------------------------------
+ * Menu principal: os <a> precisam do mesmo box dos <button> antigos
+ * --------------------------------------------------------------- */
+#menu .menu-list {
+	display: flex;
+	gap: 2px;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu .menu-list > li {
+	position: relative;
+}
+
+#menu > li > a,
+#menu .menu-list > li > a {
+	display: block;
+	padding: 9px 14px;
+	border-radius: 10px;
+	font-size: .95rem;
+	color: var(--ink);
+	text-decoration: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	transition: .2s;
+}
+
+#menu > li > a:hover,
+#menu > li > a:focus,
+#menu .menu-list > li > a:hover,
+#menu .menu-list > li > a:focus {
+	background: #ecfdf5;
+	color: var(--green-dark);
+}
+
+/* Remove o padding herdado de "nav a" do CSS base dentro do wrapper. */
+#menu .menu-list > li > a {
+	padding: 9px 14px;
+}
+
+#menu a.dd-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+}
+
+#menu a.dd-btn i {
+	font-size: .7rem;
+}
+
+@media (max-width: 900px) {
+	#menu .menu-list {
+		flex-direction: column;
+		align-items: stretch;
+		flex: 1 1 auto;
+	}
+
+	#menu .dd-menu {
+		display: block;
+		position: static;
+		box-shadow: none;
+		padding: 2px 0 2px 14px;
+	}
+
+	#menu .menu-list > li > a,
+	#menu .dd-menu a {
+		width: 100%;
+		text-align: left;
+		padding: 12px 16px;
+		font-size: .95rem;
+	}
+
+	#menu li.current-menu-item > a::after,
+	#menu li.current_page_item > a::after {
+		display: none;
+	}
+}
+
+/* ---------------------------------------------------------------
+ * Formulários: o layout vem do CSS base; aqui só garantimos
+ * que os campos do formulário do admin fiquem alinhados.
+ * --------------------------------------------------------------- */
+.page-wrap form input[type="text"],
+.page-wrap form input[type="email"],
+.page-wrap form input[type="tel"],
+.page-wrap form input[type="number"],
+.page-wrap form input[type="url"],
+.page-wrap form textarea,
+.page-wrap form select {
+	width: 100%;
+}
+
+/* ---------------------------------------------------------------
+ * Conteúdo vazio (ex.: Transparência sem lançamentos)
+ * --------------------------------------------------------------- */
+.lar-empty {
+	max-width: 720px;
+	margin: 32px auto;
+	padding: 28px;
+	border: 1px dashed var(--green-primary, #047857);
+	border-radius: 16px;
+	text-align: center;
+	color: var(--ink, #0f1226);
+	background: #ffffff;
+}
+
+.lar-empty strong {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 1.1rem;
+}
+
+/* ---------------------------------------------------------------
+ * Aviso de retorno dos formulários
+ * --------------------------------------------------------------- */
+.lar-notice {
+	max-width: 720px;
+	margin: 0 auto 20px;
+	padding: 14px 18px;
+	border-radius: 12px;
+	border: 1px solid transparent;
+	font-size: .95rem;
+	font-weight: 500;
+}
+
+.lar-notice-ok {
+	background: #ecfdf5;
+	border-color: var(--green-primary, #047857);
+	color: var(--green-dark, #065f46);
+}
+
+.lar-notice-erro {
+	background: #fef2f2;
+	border-color: #dc2626;
+	color: #991b1b;
+}
+
+/* ---------------------------------------------------------------
+ * Card que virou link (o SPA usava div com onclick)
+ * --------------------------------------------------------------- */
+a.card {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+}
+
+a.card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 18px 40px rgba(4, 120, 87, .18);
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+
+a.card h3,
+a.card h2 {
+	color: inherit;
+}
+
+/* Texto que era link sem destino (href="#" virou span). */
+.activity-link[aria-disabled="true"],
+.card-link[aria-disabled="true"] {
+	cursor: default;
+	opacity: .65;
+}
+
+.activity-link[aria-disabled="true"]:hover {
+	background: none;
+	color: inherit;
+}
+
+/* ---------------------------------------------------------------
+ * Pular para o conteúdo (acessibilidade)
+ * --------------------------------------------------------------- */
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.skip-link:focus {
+	position: fixed !important;
+	top: 12px;
+	left: 12px;
+	width: auto;
+	height: auto;
+	clip: auto;
+	z-index: 200;
+	padding: 12px 18px;
+	background: #fff;
+	color: var(--green-dark, #065f46);
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+	font-weight: 700;
+}
+
+/* ---------------------------------------------------------------
+ * Filtros da transparência
+ * --------------------------------------------------------------- */
+.lar-trans-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 24px;
+}
+
+.lar-trans-filters .trans-select {
+	flex: 1 1 200px;
+}
+
+.trans-ver-mais {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: 12px;
+	font-size: .88rem;
+	font-weight: 700;
+	color: var(--green-dark, #065f46);
+}
+
+/* ---------------------------------------------------------------
+ * Admin: campos da metabox de capa
+ * --------------------------------------------------------------- */
+.lar-hero-fields label {
+	display: block;
+	margin: 12px 0 4px;
+	font-weight: 600;
+}
+
+.lar-hero-fields input[type="text"],
+.lar-hero-fields textarea {
+	width: 100%;
+	max-width: 720px;
+}

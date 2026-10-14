@@ -2,3 +2,45 @@
 Thumbs.db
 node_modules/
 *.log
+
+# ---- WordPress (core versionado no repositório; use o WP-CLI para gerenciar) ----
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+/wp-config.php
+/wp-cli.local.yml
+/.htaccess
+
+# Uploads e artefatos gerados
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/languages/
+/wp-content/lar-cache/
+
+# Temas padrão do WordPress (reinstaláveis; só versionamos o tema próprio)
+/wp-content/themes/twentytwentyfive/
+/wp-content/themes/twentytwentyfour/
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/index.php
+/wp-content/index.php
+
+# Plugins de terceiros (reinstaláveis)
+/wp-content/plugins/
+
+# Amostra de config do núcleo (sem segredos, mas arquivo do core)
+/wp-config-sample.php

@@ -1,5 +1,5 @@
 const pages=[...document.querySelectorAll('.page')];
-const titles={quem:'Quem somos',atividades:'Atividades',galeria:'Galeria de Atividades',noticias:'Notícias',eventos:'Eventos',transparencia:'Transparência',fale:'Fale Conosco',trabalhe:'Trabalhe Conosco',inscricao:'Pré Inscrição',quadra:'Quadra dos sonhos',aces:'Instituto ACES'};
+const titles={quem:'Quem somos',atividades:'Atividades',galeria:'Galeria de Atividades',noticias:'Notícias',eventos:'Eventos',transparencia:'Transparência',fale:'Fale Conosco',trabalhe:'Trabalhe Conosco',inscricao:'Pré Inscrição',quadra:'Quadra dos sonhos',aces:'Instituto ACES','esportes-base':'Esportes de Base'};
 let navStack=[];
 let pageTimer=null;
 function showPage(id){
@@ -44,6 +44,18 @@ function renderCrumb(id){
 function openDonation(){document.getElementById('donation').classList.add('open')}
 function closeDonation(){document.getElementById('donation').classList.remove('open')}
 function toggleMenu(){document.getElementById('menu').classList.toggle('open')}
+function switchSport(id,btn){
+  document.querySelectorAll('#sportTabs button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  else{const map={futebol:0,handebol:1,volei:2,beachtenis:3,tenis:4,atletismo:5};const tabs=document.querySelectorAll('#sportTabs button');if(tabs[map[id]])tabs[map[id]].classList.add('active');}
+  document.querySelectorAll('.sport-panel').forEach(p=>{p.style.display=p.dataset.sport===id?'':'none'});
+}
+function goSport(id){showPage('atividades');setTimeout(()=>switchSport(id),250);}
+function showEsportesBase(e){
+  if(e)e.preventDefault();
+  const pasta=document.getElementById('pasta-esportes');
+  if(pasta){pasta.scrollIntoView({behavior:'smooth',block:'start'});}
+}
 document.getElementById('menu').addEventListener('click',e=>{if(e.target.closest('button'))document.getElementById('menu').classList.remove('open')});
 function openTransModal(btn){
   const card=btn.closest('.trans-card');
