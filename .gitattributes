@@ -1,0 +1,4 @@
+# Quebras de linha por tipo de arquivo (o instalador roda em Windows e Linux).
+*.sh text eol=lf
+*.bat text eol=crlf
+*.php text eol=lf
