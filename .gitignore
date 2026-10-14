@@ -44,3 +44,6 @@ node_modules/
 
 # Amostra de config do núcleo (sem segredos, mas arquivo do core)
 /wp-config-sample.php
+
+# WP-CLI baixado pelo instalador (tools/setup.php)
+/tools/wp-cli.phar

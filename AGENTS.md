@@ -27,3 +27,17 @@
 - Botões de ação (ex.: "Doe aqui") abrem modais via `data-lar-open`,
   sem `onclick` inline.
 - `href="#"` sem destino vira texto/`<span>`, não link.
+
+## 4. Ambiente local em 1 comando
+
+- Comando: `setup.bat` (na raiz; localiza o PHP do Laragon sozinho).
+- Lógica: `tools/setup.php` — idempotente (só faz o que falta).
+  Baixa o WP-CLI e o núcleo se preciso, cria `wp-config.php` + banco,
+  instala o WP, ativa o tema, importa as páginas de `layout/index.html`
+  (leitura!), configura o ícone e verifica o resultado.
+- Opções: `--fresh` (APAGA o banco e reinstala — nunca em produção),
+  `--skip-import`, `--skip-verify`, `--dry-run`, `--help`.
+- Config por ambiente: `LAR_DB_NAME`, `LAR_DB_USER`, `LAR_DB_PASS`,
+  `LAR_DB_HOST`, `LAR_URL`, `LAR_TITLE`, `LAR_ADMIN_USER`,
+  `LAR_ADMIN_PASSWORD`, `LAR_ADMIN_EMAIL`, `LAR_ORIGEM`, `LAR_LOCALE`.
+- Gerado e ignorado pelo git: `tools/wp-cli.phar`.
